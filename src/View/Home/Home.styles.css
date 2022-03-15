@@ -1,0 +1,25 @@
+.home {
+  height: 80vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.margin-top-home {
+  margin-top: 1rem;
+}
+
+.margin-bottom-home {
+  margin-bottom: 1rem;
+}
+
+.icon {
+  height: 8rem;
+}
+
+.role {
+  color: #ff6600;
+}

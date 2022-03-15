@@ -1,0 +1,21 @@
+footer {
+  width: 80%;
+  margin: auto;
+}
+
+svg {
+  color: #000000;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.footer-img {
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
