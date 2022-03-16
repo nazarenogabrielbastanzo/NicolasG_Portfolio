@@ -8,6 +8,9 @@ import Home from "../../View/Home/Home";
 import Portfolio from "../../View/Portfolio/Portfolio";
 import Contact from "../../View/Contact/Contact";
 
+// Utils
+import blackIcon from "../../Utils/Img/Black-Icon.png";
+
 // Styles
 import "./Nav.styles.css";
 
@@ -15,8 +18,8 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-light bg-transparent">
       <div className="container-nav">
-        <Link to={<Home />} className="navbar-brand">
-          Nicolas G
+        <Link to="/" className="navbar-brand">
+          <span>Nicolas G</span>
         </Link>
         <button
           className="navbar-toggler"
@@ -45,18 +48,18 @@ const Nav = () => {
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
                 <Link
-                  to={<Portfolio />}
+                  to="/portfolio"
                   className="nav-link active"
                   aria-current="page"
                 >
                   Portfolio
                 </Link>
 
-                <Link to={<About />} className="nav-link" aria-current="page">
+                <Link to="/about" className="nav-link" aria-current="page">
                   About
                 </Link>
 
-                <Link to={<Contact />} className="nav-link" aria-current="page">
+                <Link to="/contact" className="nav-link" aria-current="page">
                   Contact
                 </Link>
               </li>
@@ -66,6 +69,11 @@ const Nav = () => {
                 </a>
               </li>
             </ul>
+            <div className="container-icon-nav">
+              <Link to="/">
+                <img className="icon-nav" src={blackIcon} alt="Icon" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

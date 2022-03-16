@@ -1,6 +1,17 @@
 .container-nav {
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: flex;
   justify-content: space-between;
+}
+
+.container-icon-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-nav {
+  height: 8rem;
+  text-align: center;
 }

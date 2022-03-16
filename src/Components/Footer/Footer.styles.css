@@ -1,6 +1,15 @@
 footer {
-  width: 80%;
+  width: 90%;
+  height: 10vh;
   margin: auto;
+}
+
+.footer-img {
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 svg {
@@ -12,10 +21,6 @@ svg {
   margin-right: 1rem;
 }
 
-.footer-img {
-  height: 2rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-text p {
+  font-size: 0.8rem;
 }

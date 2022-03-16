@@ -33,7 +33,7 @@ const Footer = () => {
           </svg>
         </a>
       </div>
-      <div className="text-center">
+      <div className="text-center footer-text">
         <p className="mb-0">Quindio - Colombia</p>
         <p className="mb-0">nicolasggdev@gmail.com</p>
       </div>
