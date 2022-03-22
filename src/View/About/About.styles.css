@@ -1,0 +1,41 @@
+.container-about {
+  width: 90%;
+  margin: auto;
+}
+
+.section-about {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-about h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.titles {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.teachers-containers {
+  margin-left: 0.3rem;
+}
+
+.icons {
+  margin-left: 0.3rem;
+  height: 1.5rem;
+}
+
+.ul-tecnologies {
+  padding-left: 0;
+}
+
+.ul-tecnologies li {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.ul-tecnologies li img {
+  margin-right: 0.5rem;
+}
