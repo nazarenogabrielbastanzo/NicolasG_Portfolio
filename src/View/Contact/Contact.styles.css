@@ -1,5 +1,5 @@
 .container-contact {
-  height: 81vh;
+  height: 80vh;
   width: 90%;
   margin: auto;
   display: flex;
@@ -13,4 +13,8 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 3rem;
+}
+
+.container-contact p {
+  text-align: center;
 }

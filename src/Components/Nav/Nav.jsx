@@ -2,14 +2,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Import View
-import About from "../../View/About/About";
-import Home from "../../View/Home/Home";
-import Portfolio from "../../View/Portfolio/Portfolio";
-import Contact from "../../View/Contact/Contact";
-
 // Utils
 import blackIcon from "../../Utils/Img/Black-Icon.png";
+// import NicolasCv from "../../Utils/Cv/NicolasGGCV.pdf";
 
 // Styles
 import "./Nav.styles.css";
@@ -64,6 +59,13 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="nav-item">
+                {/* <a
+                  download="CV-NicolasGonzalezGiraldo"
+                  className="nav-link"
+                  href={NicolasCv}
+                >
+                  Download CV
+                </a> */}
                 <a className="nav-link" href="#">
                   Download CV
                 </a>
