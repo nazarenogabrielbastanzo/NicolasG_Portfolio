@@ -8,13 +8,22 @@
   align-items: center;
 }
 
-.container-contact h2 {
+.title-contact {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 3rem;
 }
 
-.container-contact p {
+.p-contact {
   text-align: center;
+}
+
+@media only screen and (min-width: 576px) {
+  .title-contact {
+    font-size: 3rem;
+  }
+  .p-contact {
+    font-size: 1.2rem;
+  }
 }

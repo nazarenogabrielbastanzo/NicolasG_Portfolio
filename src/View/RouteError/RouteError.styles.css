@@ -18,3 +18,39 @@
   font-weight: 700;
   font-size: 3rem;
 }
+
+@media only screen and (min-width: 350px) {
+  .gif {
+    height: 20rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .gif {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gif {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .gif {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .gif {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .gif {
+    width: 30%;
+  }
+}

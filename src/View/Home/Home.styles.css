@@ -8,11 +8,8 @@
   align-items: center;
 }
 
-.margin-top-home {
+.margin-home {
   margin-top: 1rem;
-}
-
-.margin-bottom-home {
   margin-bottom: 1rem;
 }
 
@@ -22,4 +19,32 @@
 
 .role {
   color: #ff6600;
+}
+
+@media only screen and (min-width: 768px) {
+  .icon {
+    height: 9rem;
+  }
+
+  .title-home {
+    font-size: 2.5rem;
+  }
+
+  .text-home {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .icon {
+    height: 9.5rem;
+  }
+
+  .title-home {
+    font-size: 2.8rem;
+  }
+
+  .text-home {
+    font-size: 1.5rem;
+  }
 }
