@@ -13,7 +13,7 @@ const Nav = () => {
     <nav className="navbar navbar-light bg-transparent">
       <div className="container-nav">
         <Link to="/" className="navbar-brand">
-          <span>Nicolas G</span>
+          <span className="name">Nicolas G</span>
         </Link>
         <button
           className="navbar-toggler"
@@ -41,21 +41,20 @@ const Nav = () => {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <Link
-                  to="/portfolio"
-                  className="nav-link active"
-                  aria-current="page"
-                >
-                  Portfolio
-                </Link>
-
-                <Link to="/about" className="nav-link" aria-current="page">
-                  About
-                </Link>
-
-                <Link to="/contact" className="nav-link" aria-current="page">
-                  Contact
-                </Link>
+                <div data-bs-dismiss="offcanvas" aria-label="Close">
+                  <Link
+                    to="/portfolio"
+                    className="nav-link active"
+                    aria-current="page"
+                  >
+                    Portfolio
+                  </Link>
+                </div>
+                <div data-bs-dismiss="offcanvas" aria-label="Close">
+                  <Link to="/about" className="nav-link" aria-current="page">
+                    About
+                  </Link>
+                </div>
               </li>
               <li className="nav-item">
                 {/* <a
@@ -72,7 +71,13 @@ const Nav = () => {
             </ul>
             <div className="container-icon-nav">
               <Link to="/">
-                <img className="icon-nav" src={blackIcon} alt="Icon" />
+                <img
+                  className="icon-nav"
+                  src={blackIcon}
+                  alt="Icon"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                />
               </Link>
             </div>
           </div>

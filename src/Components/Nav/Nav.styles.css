@@ -1,8 +1,13 @@
 .container-nav {
   width: 90%;
+  height: 7vh;
   margin: auto;
   display: flex;
   justify-content: space-between;
+}
+
+.navbar {
+  padding-bottom: 0;
 }
 
 .container-icon-nav {
@@ -14,4 +19,31 @@
 .icon-nav {
   height: 8rem;
   text-align: center;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 576px) {
+  .container-nav {
+    width: 80%;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .name {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-nav {
+    width: 70%;
+  }
 }

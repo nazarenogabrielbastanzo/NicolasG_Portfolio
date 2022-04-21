@@ -9,7 +9,6 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./View/Home/Home";
 import Portfolio from "./View/Portfolio/Portfolio";
 import About from "./View/About/About";
-import Contact from "./View/Contact/Contact";
 import RouteError from "./View/RouteError/RouteError";
 
 // Styles
@@ -23,7 +22,6 @@ function App() {
         <Route path="/" element={<Home />} exact />
         <Route path="/portfolio" element={<Portfolio />} exact />
         <Route path="/about" element={<About />} exact />
-        <Route path="/contact" element={<Contact />} exact />
         <Route path="*" element={<RouteError />} />
       </Routes>
       <Footer />

@@ -1,6 +1,6 @@
 .not-found-container {
   width: 90%;
-  height: 80vh;
+  height: 75vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -29,6 +29,9 @@
   .gif {
     width: 80%;
   }
+  .not-found-container {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -46,6 +49,9 @@
 @media only screen and (min-width: 1200px) {
   .gif {
     width: 40%;
+  }
+  .not-found-container {
+    width: 70%;
   }
 }
 

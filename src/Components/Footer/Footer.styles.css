@@ -1,8 +1,12 @@
 footer {
   width: 90%;
-  height: 10vh;
+  height: 15vh;
   margin: auto;
-  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0;
 }
 
 .footer-img {
@@ -22,42 +26,65 @@ svg {
   margin-right: 1rem;
 }
 
-.footer-text {
+.footer-email {
   font-size: 0.8rem;
 }
 
-@media only screen and (min-width: 300px) {
-  .footer-text {
-    font-size: 0.9rem;
-  }
+.footer-location {
+  margin-bottom: 0;
+}
 
-  footer {
-    margin-bottom: 0.6rem;
+.container-data div {
+  text-align: center;
+}
+
+@media only screen and (min-width: 300px) {
+  .footer-email {
+    font-size: 0.9rem;
   }
 }
 
 @media only screen and (min-width: 576px) {
-  .footer-text {
+  .footer-email {
     font-size: 1rem;
   }
 
   footer {
-    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .footer-son {
+    width: 100%;
+  }
+
+  .container-data {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-data div {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .footer-text {
+  .footer-email {
     font-size: 1.1rem;
   }
 
-  footer {
-    margin-bottom: 1.1rem;
+  .container-data div {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .footer-text {
+  .footer-email {
+    font-size: 1.2em;
+  }
+  .footer-location {
     font-size: 1.2em;
   }
 }

@@ -25,18 +25,18 @@ const About = () => {
         <h3>
           <b>About me </b>
         </h3>
-        <p>
+        <p className="about-text">
           📌 Hey there, I'm Nicolas! Thanks for visiting my personal website.
         </p>
       </section>
       <section>
         <article>
           <h2 className="titles">Who Am I?</h2>
-          <p>
+          <p className="about-text">
             I'm a developer from Colombia who is mainly interested in web
             technologies, especially in backend development.
           </p>
-          <p>
+          <p className="about-text">
             Developing my skills as a self-taught person online platforms (like
             <img className="icons" src={Academlo} alt="Academlo-Icon" />
             Academlo Bootcamp and
@@ -44,57 +44,59 @@ const About = () => {
             Youtube). Currenlly I'am studing in the university (UTP) in the
             colombian government program MisionTic 2022.
           </p>
-          <p>
+          <p className="about-text">
             My curiosity makes me able to learn quickly new tools and
             technologies when I needed. I enjoy sharing my knowledge and helping
             others when is possible.
           </p>
           <h2 className="titles">My Stack</h2>
-          <p>These are the technologies I like to use in my projects:</p>
+          <p className="about-text">
+            These are the technologies I like to use in my projects:
+          </p>
           <ul className="ul-tecnologies">
             <li>
               <img className="icons" src={Html} alt="Html-Icon" />
-              <span>HTML</span>
+              <span className="about-text">HTML</span>
             </li>
             <li>
               <img className="icons" src={Css} alt="Css-Icon" />
-              <span>CSS</span>
+              <span className="about-text">CSS</span>
             </li>
             <li>
               <img className="icons" src={JavaScript} alt="JavaScript-Icon" />
-              <span>JavaScript</span>
+              <span className="about-text">JavaScript</span>
             </li>
             <li>
               <img className="icons" src={NodeJs} alt="NodeJs-Icon" />
-              <span>NodeJs</span>
+              <span className="about-text">NodeJs</span>
             </li>
             <li>
               <img className="icons" src={Reacticon} alt="React-Icon" />
-              <span>React</span>
+              <span className="about-text">React</span>
             </li>
             <li>
               <img className="icons" src={Git} alt="Git-Icon" />
-              <span>Git</span>
+              <span className="about-text">Git</span>
             </li>
             <li>
               <img className="icons" src={Github} alt="Github-Icon" />
-              <span>Github</span>
+              <span className="about-text">Github</span>
             </li>
             <li>
               <img className="icons" src={PostgresQL} alt="PostgresQL-Icon" />
-              <span>PostgresQL</span>
+              <span className="about-text">PostgresQL</span>
             </li>
             <li>
               <img className="icons" src={MongoDB} alt="MongoDB-Icon" />
-              <span>MongoDB</span>
+              <span className="about-text">MongoDB</span>
             </li>
             <li>
               <img className="icons" src={Netlify} alt="Netlify-Icon" />
-              <span>Netlify</span>
+              <span className="about-text">Netlify</span>
             </li>
             <li>
               <img className="icons" src={Heroku} alt="MongoDB-Icon" />
-              <span>Heroku</span>
+              <span className="about-text">Heroku</span>
             </li>
           </ul>
         </article>

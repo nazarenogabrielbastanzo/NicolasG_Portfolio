@@ -1,5 +1,5 @@
 .home {
-  height: 80vh;
+  height: 75vh;
   width: 90%;
   margin: auto;
   display: flex;
@@ -19,6 +19,12 @@
 
 .role {
   color: #ff6600;
+}
+
+@media only screen and (min-width: 576px) {
+  .home {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -46,5 +52,11 @@
 
   .text-home {
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .home {
+    width: 70%;
   }
 }
