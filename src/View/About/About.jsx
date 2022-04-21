@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // Styles
 import "./About.styles.css";
@@ -20,7 +21,11 @@ import Heroku from "../../Utils/Img/Heroku.png";
 
 const About = () => {
   return (
-    <div className="container-about">
+    <motion.div
+      className="container-about"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <section className="section-about">
         <h3>
           <b>About me </b>
@@ -101,7 +106,7 @@ const About = () => {
           </ul>
         </article>
       </section>
-    </div>
+    </motion.div>
   );
 };
 
