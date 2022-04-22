@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // Styles
 import "./About.styles.css";
@@ -20,6 +21,8 @@ import Netlify from "../../Utils/Img/Netlify.png";
 import Heroku from "../../Utils/Img/Heroku.png";
 
 const About = () => {
+  const [t] = useTranslation("global");
+
   return (
     <motion.div
       className="container-about"
@@ -28,36 +31,24 @@ const About = () => {
     >
       <section className="section-about">
         <h3>
-          <b>About me </b>
+          <b>{t("about.title")} </b>
         </h3>
-        <p className="about-text">
-          📌 Hey there, I'm Nicolas! Thanks for visiting my personal website.
-        </p>
+        <p className="about-text">📌 {t("about.gratitude")}</p>
       </section>
       <section>
         <article>
-          <h2 className="titles">Who Am I?</h2>
+          <h2 className="titles">{t("about.who-am-i")}</h2>
+          <p className="about-text">{t("about.who-am-i-content1")}</p>
           <p className="about-text">
-            I'm a developer from Colombia who is mainly interested in web
-            technologies, especially in backend development.
-          </p>
-          <p className="about-text">
-            Developing my skills as a self-taught person online platforms (like
+            {t("about.who-am-i-content2")}
             <img className="icons" src={Academlo} alt="Academlo-Icon" />
-            Academlo Bootcamp and
+            {t("about.who-am-i-content3")}
             <img className="icons" src={Youtube} alt="Academlo-Icon" />
-            Youtube). Currenlly I'am studing in the university (UTP) in the
-            colombian government program MisionTic 2022.
+            {t("about.who-am-i-content4")}
           </p>
-          <p className="about-text">
-            My curiosity makes me able to learn quickly new tools and
-            technologies when I needed. I enjoy sharing my knowledge and helping
-            others when is possible.
-          </p>
-          <h2 className="titles">My Stack</h2>
-          <p className="about-text">
-            These are the technologies I like to use in my projects:
-          </p>
+          <p className="about-text">{t("about.who-am-i-content5")}</p>
+          <h2 className="titles">{t("about.my-stack")}</h2>
+          <p className="about-text">{t("about.tecnologies")}</p>
           <ul className="ul-tecnologies">
             <li>
               <img className="icons" src={Html} alt="Html-Icon" />

@@ -1,14 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Utils
 import blackIcon from "../../Utils/Img/Black-Icon.png";
-// import NicolasCv from "../../Utils/Cv/NicolasGGCV.pdf";
+import Spanish from "../../Utils/Img/Spanish.png";
+import English from "../../Utils/Img/English.png";
 
 // Styles
 import "./Nav.styles.css";
 
 const Nav = () => {
+  const [t, i18n] = useTranslation("global");
+
   return (
     <nav className="navbar navbar-light bg-transparent">
       <div className="container-nav">
@@ -43,30 +47,51 @@ const Nav = () => {
               <li className="nav-item">
                 <div data-bs-dismiss="offcanvas" aria-label="Close">
                   <Link
-                    to="/portfolio"
+                    to="/projects"
                     className="nav-link active"
                     aria-current="page"
                   >
-                    Portfolio
+                    {t("nav.projects")}
                   </Link>
                 </div>
                 <div data-bs-dismiss="offcanvas" aria-label="Close">
                   <Link to="/about" className="nav-link" aria-current="page">
-                    About
+                    {t("nav.about")}
                   </Link>
                 </div>
-              </li>
-              <li className="nav-item">
-                {/* <a
-                  download="CV-NicolasGonzalezGiraldo"
-                  className="nav-link"
-                  href={NicolasCv}
+                <div data-bs-dismiss="offcanvas" aria-label="Close">
+                  <a className="nav-link" aria-current="page" href="#">
+                    {t("nav.download-cv")}
+                  </a>
+                </div>
+                <div
+                  className="container-lenguaje"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
                 >
-                  Download CV
-                </a> */}
-                <a className="nav-link" href="#">
-                  Download CV
-                </a>
+                  <button
+                    className="nav-link button-lenguaje-icon"
+                    aria-current="page"
+                    onClick={() => i18n.changeLanguage("es")}
+                  >
+                    <img
+                      className="lenguaje-icon"
+                      src={Spanish}
+                      alt="spanish-lenguaje"
+                    />
+                  </button>
+                  <button
+                    className="nav-link button-lenguaje-icon"
+                    aria-current="page"
+                    onClick={() => i18n.changeLanguage("en")}
+                  >
+                    <img
+                      className="lenguaje-icon"
+                      src={English}
+                      alt="spanish-lenguaje"
+                    />
+                  </button>
+                </div>
               </li>
             </ul>
             <div className="container-icon-nav">

@@ -27,6 +27,20 @@
   align-items: center;
 }
 
+.container-lenguaje {
+  display: flex;
+}
+
+.button-lenguaje-icon {
+  border: none;
+  background-color: transparent;
+}
+
+.lenguaje-icon {
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
 @media only screen and (min-width: 576px) {
   .container-nav {
     width: 80%;

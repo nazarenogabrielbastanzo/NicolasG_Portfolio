@@ -63,7 +63,7 @@ svg {
     justify-content: center;
   }
 
-  .container-data div {
+  .container-data-son {
     margin-left: 1rem;
     margin-right: 1rem;
   }
@@ -74,7 +74,7 @@ svg {
     font-size: 1.1rem;
   }
 
-  .container-data div {
+  .container-data-son {
     margin-left: 2rem;
     margin-right: 2rem;
   }

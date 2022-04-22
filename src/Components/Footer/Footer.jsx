@@ -1,22 +1,25 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // Styles
 import "./Footer.styles.css";
 
 const Footer = () => {
+  const [t] = useTranslation("global");
+
   return (
     <footer className="bg-transparent text-center">
       <div className="footer-son">
         <div className="container-data">
-          <div>
+          <div className="container-data-son">
             <h4>
-              <b>Location</b>
+              <b>{t("footer.location")}</b>
             </h4>
-            <p className="footer-location">Armenia, Quindio</p>
+            <p className="footer-location">{t("footer.place")}</p>
           </div>
-          <div>
+          <div className="container-data-son">
             <h4>
-              <b>Contact me</b>
+              <b>{t("footer.contact-me")}</b>
             </h4>
             <div className="footer-img">
               <a href="https://github.com/nicolasggdev">

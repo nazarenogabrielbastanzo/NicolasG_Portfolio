@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "about": "Acerca de mi",
+    "download-cv": "Descarga CV"
+  },
+  "home": {
+    "greetings": "Hola, Soy Nicolás González G.",
+    "to-be": "Soy un",
+    "role": "Desarrollador Backend",
+    "like-it": "Me gusta crear cosas con tecnologías web"
+  },
+  "about": {
+    "title": "Acerca de mi",
+    "gratitude": "¡Hola, soy Nicolás! Gracias por visitar mi sitio web personal.",
+    "who-am-i": "¿Quién soy?",
+    "who-am-i-content1": "Soy un desarrollador de Colombia que está principalmente interesado en las tecnologías web, especialmente en el desarrollo de backend",
+    "who-am-i-content2": "Desarrollo mis habilidades como un autodidacta en plataformas en línea (como",
+    "who-am-i-content3": "Academlo Bootcamp y",
+    "who-am-i-content4": "Youtube). Actualmente estoy estudiando en la Universidad (UTP) en el programa del gobierno Colombiano MisionTic 2022",
+    "who-am-i-content5": "Mi curiosidad me permite aprender rápidamente nuevas herramientas y tecnologías cuando las necesito. Disfruto compartiendo mis conocimientos y ayudando a otros cuando es posible.",
+    "my-stack": "Mi Portafolio",
+    "tecnologies": "Estas son las tecnologías que conozco y he utilizado en mis proyectos:"
+  },
+  "footer": {
+    "location": "Ubicación",
+    "place": "Armenia, Quindío",
+    "contact-me": "Contáctame"
+  }
+}

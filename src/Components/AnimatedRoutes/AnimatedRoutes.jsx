@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 
 // Views
 import Home from "../../View/Home/Home";
-import Portfolio from "../../View/Portfolio/Portfolio";
+import Projects from "../../View/Projects/Projects";
 import About from "../../View/About/About";
 import RouteError from "../../View/RouteError/RouteError";
 
@@ -14,7 +14,7 @@ const AnimatedRoutes = () => {
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} exact />
-        <Route path="/portfolio" element={<Portfolio />} exact />
+        <Route path="/projects" element={<Projects />} exact />
         <Route path="/about" element={<About />} exact />
         <Route path="*" element={<RouteError />} />
       </Routes>
