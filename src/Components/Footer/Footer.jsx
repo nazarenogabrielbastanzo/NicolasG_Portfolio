@@ -22,7 +22,7 @@ const Footer = () => {
               <b>{t("footer.contact-me")}</b>
             </h4>
             <div className="footer-img">
-              <a href="https://github.com/nicolasggdev">
+              <a href="https://github.com/nicolasggdev" className="hover-icons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -35,7 +35,10 @@ const Footer = () => {
                 </svg>
               </a>
 
-              <a href="https://www.linkedin.com/in/nicolasggdev/">
+              <a
+                href="https://www.linkedin.com/in/nicolasggdev/"
+                className="hover-icons"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

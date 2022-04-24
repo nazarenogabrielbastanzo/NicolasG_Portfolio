@@ -41,6 +41,21 @@
   margin-right: 1rem;
 }
 
+.container-nav-text {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.nav-text:hover {
+  color: #ff6600;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 576px) {
   .container-nav {
     width: 80%;

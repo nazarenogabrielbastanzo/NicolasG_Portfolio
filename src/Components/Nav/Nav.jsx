@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 
 // Utils
 import blackIcon from "../../Utils/Img/Black-Icon.png";
@@ -9,9 +10,27 @@ import English from "../../Utils/Img/English.png";
 
 // Styles
 import "./Nav.styles.css";
+import { useEffect, useState } from "react";
 
 const Nav = () => {
   const [t, i18n] = useTranslation("global");
+  const [document, setDocument] = useState({});
+  const [link, setLink] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("https://nicolas-portfolio-project.herokuapp.com/api/v1/user")
+      .then((res) => setDocument(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  const handdleCv = (language) => {
+    if (language === "es") {
+      setLink(document?.data?.document[1]?.document);
+    } else if (language === "en") {
+      setLink(document?.data?.document[0]?.document);
+    }
+  };
 
   return (
     <nav className="navbar navbar-light bg-transparent">
@@ -45,22 +64,40 @@ const Nav = () => {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <div data-bs-dismiss="offcanvas" aria-label="Close">
+                <div
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                  className="container-nav-text"
+                >
                   <Link
                     to="/projects"
-                    className="nav-link active"
+                    className="nav-text active"
                     aria-current="page"
                   >
                     {t("nav.projects")}
                   </Link>
                 </div>
-                <div data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link to="/about" className="nav-link" aria-current="page">
+                <div
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                  className="container-nav-text"
+                >
+                  <Link to="/about" className="nav-text" aria-current="page">
                     {t("nav.about")}
                   </Link>
                 </div>
-                <div data-bs-dismiss="offcanvas" aria-label="Close">
-                  <a className="nav-link" aria-current="page" href="#">
+                <div
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                  className="container-nav-text"
+                >
+                  <a
+                    onClick={() => handdleCv(i18n.language)}
+                    className="nav-text"
+                    aria-current="page"
+                    href={link}
+                    download
+                  >
                     {t("nav.download-cv")}
                   </a>
                 </div>

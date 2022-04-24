@@ -14,13 +14,16 @@
     "title": "Acerca de mi",
     "gratitude": "¡Hola, soy Nicolás! Gracias por visitar mi sitio web personal.",
     "who-am-i": "¿Quién soy?",
-    "who-am-i-content1": "Soy un desarrollador de Colombia que está principalmente interesado en las tecnologías web, especialmente en el desarrollo de backend",
+    "who-am-i-content1": "Soy un desarrollador de Colombia que está interesado en las tecnologías web, especialmente en el desarrollo de backend",
     "who-am-i-content2": "Desarrollo mis habilidades como un autodidacta en plataformas en línea (como",
     "who-am-i-content3": "Academlo Bootcamp y",
     "who-am-i-content4": "Youtube). Actualmente estoy estudiando en la Universidad (UTP) en el programa del gobierno Colombiano MisionTic 2022",
     "who-am-i-content5": "Mi curiosidad me permite aprender rápidamente nuevas herramientas y tecnologías cuando las necesito. Disfruto compartiendo mis conocimientos y ayudando a otros cuando es posible.",
     "my-stack": "Mi Portafolio",
     "tecnologies": "Estas son las tecnologías que conozco y he utilizado en mis proyectos:"
+  },
+  "projecs": {
+    "title": "Proyectos"
   },
   "footer": {
     "location": "Ubicación",

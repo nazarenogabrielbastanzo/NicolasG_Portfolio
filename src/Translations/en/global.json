@@ -22,6 +22,9 @@
     "my-stack": "My Stack",
     "tecnologies": "These are the technologies that I know and have used in my projects:"
   },
+  "projecs": {
+    "title": "Projects"
+  },
   "footer": {
     "location": "Location",
     "place": "Armenia, Quindio",
