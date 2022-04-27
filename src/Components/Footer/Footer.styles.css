@@ -40,7 +40,7 @@ svg {
 
 .hover-icons svg:hover {
   color: #ff6600;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 @media only screen and (min-width: 300px) {

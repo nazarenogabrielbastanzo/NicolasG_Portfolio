@@ -1,9 +1,12 @@
 import React from "react";
 
+// Styles
+import "./Loader.styles.css";
+
 const Loader = () => {
   return (
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
+    <div className="spinner-border loader" role="status">
+      <span className="visually-hidden">Loading...</span>
     </div>
   );
 };

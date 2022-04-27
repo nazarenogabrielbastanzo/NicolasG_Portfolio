@@ -8,18 +8,19 @@ import Projects from "./Projects";
 import "./Projects.styles.css";
 
 // Componentes
-// import Loader from "../../Components/Footer/Footer";
+import Loader from "../../Components/Loader/Loader";
 
 const Portfolio = () => {
   const [t] = useTranslation("global");
-  const [projects, setProjects] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [projects, setProjects] = useState([false, false, false]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get("https://nicolas-portfolio-project.herokuapp.com/api/v1/projects")
       .then((res) => {
         setProjects(res?.data?.data?.projects);
+        setIsLoading(false);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -33,9 +34,13 @@ const Portfolio = () => {
       >
         <b> {t("projecs.title")} </b>
       </motion.h3>
-      {projects?.map((project) => (
-        <Projects project={project} key={project.id} />
-      ))}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        projects?.map((project) => (
+          <Projects project={project} key={project.id} />
+        ))
+      )}
     </div>
   );
 };
