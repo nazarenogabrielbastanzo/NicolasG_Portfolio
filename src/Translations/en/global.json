@@ -23,7 +23,8 @@
     "tecnologies": "These are the technologies that I know and have used in my projects:"
   },
   "projecs": {
-    "title": "Projects"
+    "title": "Projects",
+    "code": "See the code!"
   },
   "footer": {
     "location": "Location",

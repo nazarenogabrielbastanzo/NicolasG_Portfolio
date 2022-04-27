@@ -7,8 +7,6 @@ import "./Projects.styles.css";
 const Portfolio = ({ project, isLoading }) => {
   const [t, i18n] = useTranslation("global");
 
-  t("projecs.title");
-
   return (
     <motion.div
       className="project"
@@ -50,7 +48,7 @@ const Portfolio = ({ project, isLoading }) => {
             target="_blank"
             rel="noreferrer"
           >
-            See the code!
+            {t("projecs.code")}
           </a>
         </div>
       </div>
