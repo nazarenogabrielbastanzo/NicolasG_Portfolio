@@ -6,7 +6,7 @@ This project is my personal portfolio, it was created with React.
 
 If you want to view the project locally, you must install the dependencies to view them.
 
-## Install and started
+## Install and start
 
 ### `npm install`
 
