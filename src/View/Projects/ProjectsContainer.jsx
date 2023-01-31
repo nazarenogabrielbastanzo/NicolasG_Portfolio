@@ -17,7 +17,9 @@ const Portfolio = () => {
 
   useEffect(() => {
     axios
-      .get("https://nicolas-portfolio-project.herokuapp.com/api/v1/projects")
+      .get(
+        "https://portfolio-api-production-a234.up.railway.app/api/v1/projects"
+      )
       .then((res) => {
         setProjects(res?.data?.data?.projects);
         setIsLoading(false);

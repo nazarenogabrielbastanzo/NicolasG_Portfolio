@@ -19,7 +19,7 @@ const Nav = () => {
 
   useEffect(() => {
     axios
-      .get("https://nicolas-portfolio-project.herokuapp.com/api/v1/user")
+      .get("https://portfolio-api-production-a234.up.railway.app/api/v1/user")
       .then((res) => setDocument(res.data))
       .catch((err) => console.log(err));
   }, []);
