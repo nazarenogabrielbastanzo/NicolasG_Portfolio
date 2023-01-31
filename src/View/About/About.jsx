@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import "./About.styles.css";
 
 // Utils
-import Academlo from "../../Utils/Img/Academlo.png";
-import Youtube from "../../Utils/Img/Youtube.png";
+// import Academlo from "../../Utils/Img/Academlo.png";
+// import Youtube from "../../Utils/Img/Youtube.png";
 import Html from "../../Utils/Img/Html.png";
 import Css from "../../Utils/Img/Css.png";
 import JavaScript from "../../Utils/Img/JavaScript.png";
@@ -18,7 +18,8 @@ import Github from "../../Utils/Img/Github.png";
 import PostgresQL from "../../Utils/Img/PostgresQL.png";
 import MongoDB from "../../Utils/Img/MongoDB.png";
 import Netlify from "../../Utils/Img/Netlify.png";
-import Heroku from "../../Utils/Img/Heroku.png";
+import PHP from "../../Utils/Img/PHP.png";
+import Laravel from "../../Utils/Img/Laravel.png";
 
 const About = () => {
   const [t] = useTranslation("global");
@@ -41,9 +42,9 @@ const About = () => {
           <p className="about-text">{t("about.who-am-i-content1")}</p>
           <p className="about-text">
             {t("about.who-am-i-content2")}
-            <img className="icons" src={Academlo} alt="Academlo-Icon" />
+            {/* <img className="icons" src={Academlo} alt="Academlo-Icon" /> */}
             {t("about.who-am-i-content3")}
-            <img className="icons" src={Youtube} alt="Academlo-Icon" />
+            {/* <img className="icons" src={Youtube} alt="Academlo-Icon" /> */}
             {t("about.who-am-i-content4")}
           </p>
           <p className="about-text">{t("about.who-am-i-content5")}</p>
@@ -71,6 +72,14 @@ const About = () => {
               <span className="about-text">React</span>
             </li>
             <li>
+              <img className="icons" src={PHP} alt="MongoDB-Icon" />
+              <span className="about-text">PHP</span>
+            </li>
+            <li>
+              <img className="icons" src={Laravel} alt="MongoDB-Icon" />
+              <span className="about-text">Laravel</span>
+            </li>
+            <li>
               <img className="icons" src={Git} alt="Git-Icon" />
               <span className="about-text">Git</span>
             </li>
@@ -89,10 +98,6 @@ const About = () => {
             <li>
               <img className="icons" src={Netlify} alt="Netlify-Icon" />
               <span className="about-text">Netlify</span>
-            </li>
-            <li>
-              <img className="icons" src={Heroku} alt="MongoDB-Icon" />
-              <span className="about-text">Heroku</span>
             </li>
           </ul>
         </article>
