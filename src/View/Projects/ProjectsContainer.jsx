@@ -17,7 +17,9 @@ const Portfolio = () => {
 
   useEffect(() => {
     axios
-      .get("https://portfoliongg-api.fly.dev/api/v1/projects")
+      .get(
+        "https://portfolio-api-nodejs-production.up.railway.app/api/v1/projects"
+      )
       .then((res) => {
         setProjects(res?.data?.data?.projects);
         setIsLoading(false);
