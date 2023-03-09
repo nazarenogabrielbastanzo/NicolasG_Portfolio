@@ -19,7 +19,7 @@ const Nav = () => {
 
   useEffect(() => {
     axios
-      .get("https://portfolio-api-production-a234.up.railway.app/api/v1/user")
+      .get("https://portfoliongg-api.fly.dev/api/v1/user")
       .then((res) => setDocument(res.data))
       .catch((err) => console.log(err));
   }, []);
