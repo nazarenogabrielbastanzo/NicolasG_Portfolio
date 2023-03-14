@@ -5,23 +5,28 @@ const Navbar = () => {
   const navigation = [
     {
       name: "Home",
-      to: "#Banner"
+      to: "#Banner",
+      icon: "fs-1 fa-solid fa-square-h"
     },
     {
       name: "About me",
-      to: "#About"
+      to: "#About",
+      icon: "fs-1 fa-solid fa-address-card"
     },
     {
       name: "Skills",
-      to: "#Skills"
+      to: "#Skills",
+      icon: "fs-1 fa-sharp fa-solid fa-gears"
     },
     {
       name: "Projects",
-      to: "#Projects"
+      to: "#Projects",
+      icon: "fs-1 fa-solid fa-boxes-stacked"
     },
     {
       name: "Contact me",
-      to: "#Contact"
+      to: "#Contact",
+      icon: "fs-1 fa-solid fa-envelope"
     }
   ];
 
@@ -47,9 +52,6 @@ const Navbar = () => {
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header">
-            {/* <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-              Nicolas GG
-            </h5> */}
             <a className="navbar-brand" href="#Banner">
               Nicolas GG
             </a>
@@ -64,13 +66,17 @@ const Navbar = () => {
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               {navigation.map((element, index) => {
                 return (
-                  <li key={index}>
+                  <li key={index} data-bs-dismiss="offcanvas">
                     <a
-                      className="nav-link text-end"
+                      className="nav-link text-end d-flex justify-content-end align-items-center"
                       aria-current="page"
                       href={element.to}
                     >
-                      {element.name}
+                      <span className="me-2">{element.name}</span>
+                      <i
+                        className={element.icon}
+                        style={{ color: "#1083d6" }}
+                      ></i>
                     </a>
                   </li>
                 );

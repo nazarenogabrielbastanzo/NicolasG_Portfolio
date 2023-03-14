@@ -5,10 +5,11 @@
   bottom: 1rem;
   display: flex;
   justify-content: center;
+  z-index: 3;
 }
 
 .menu__footer {
-  background-color: rgba(0, 0, 0, 0.096);
+  background-color: rgba(0, 0, 0, 0.192);
   width: 80%;
   border-radius: 3rem;
   display: flex;
