@@ -1,0 +1,28 @@
+.container__footer {
+  height: 5rem;
+  width: 100vw;
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__footer {
+  background-color: rgba(0, 0, 0, 0.096);
+  width: 80%;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.switch__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swtich-input__footer {
+  height: 1.5rem;
+  width: 3rem !important;
+}

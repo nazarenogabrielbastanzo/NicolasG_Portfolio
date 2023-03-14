@@ -1,0 +1,6 @@
+.container__projects {
+  height: 20rem;
+  background-color: #1083d6;
+  z-index: 2;
+  position: relative;
+}

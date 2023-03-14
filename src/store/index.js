@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import user from "./slices/user";
+import projects from "./slices/projects";
 
 export default configureStore({
   reducer: {
-    user
+    projects
   }
 });
