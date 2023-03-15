@@ -4,9 +4,9 @@ import "./Projects.styles.css";
 
 const Projects = () => {
   return (
-    <div className="container__projects" id="Projects">
-      Projects
-    </div>
+    <section className="container__projects p-3" id="Projects">
+      <h3 className="text-center text-light">Projects</h3>
+    </section>
   );
 };
 

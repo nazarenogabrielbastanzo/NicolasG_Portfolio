@@ -4,9 +4,9 @@ import "./Contact.styles.css";
 
 const Contact = () => {
   return (
-    <div className="container__contact" id="Contact">
-      Contact
-    </div>
+    <section className="container__contact p-3" id="Contact">
+      <h3 className="text-center">Contact</h3>
+    </section>
   );
 };
 

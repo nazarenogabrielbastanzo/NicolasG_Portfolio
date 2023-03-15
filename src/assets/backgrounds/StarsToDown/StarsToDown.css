@@ -1,4 +1,4 @@
-.squares1 {
+.squaresToDown1 {
   content: " ";
   position: absolute;
   width: 3px;
@@ -38,11 +38,11 @@
     1972px 248px #fff, 1669px 1344px #ff5722, 1132px 406px #f44336,
     320px 1076px #cddc39, 126px 943px #ffeb3b, 263px 604px #ff5722,
     1546px 692px #f44336;
-  animation: animSqu 150s linear infinite;
+  animation: animSquToDown 150s linear infinite;
   z-index: 1;
 }
 
-.squares2 {
+.squaresToDown2 {
   content: " ";
   position: absolute;
   width: 3px;
@@ -82,11 +82,11 @@
     1972px 248px #fff, 1669px 1344px #ff5722, 1132px 406px #f44336,
     320px 1076px #cddc39, 126px 943px #ffeb3b, 263px 604px #ff5722,
     1546px 692px #f44336;
-  animation: animSqu 10s linear infinite;
+  animation: animSquToDown 30s linear infinite;
   z-index: 1;
 }
 
-.squares3 {
+.squaresToDown3 {
   content: " ";
   position: absolute;
   width: 2px;
@@ -126,11 +126,11 @@
     1972px 248px #fff, 1669px 1344px #ff5722, 1132px 406px #f44336,
     320px 1076px #cddc39, 126px 943px #ffeb3b, 263px 604px #ff5722,
     1546px 692px #f44336;
-  animation: animSqu 50s linear infinite;
+  animation: animSquToDown 80s linear infinite;
   z-index: 1;
 }
 
-.squares4 {
+.squaresToDown4 {
   content: " ";
   position: absolute;
   width: 1px;
@@ -170,16 +170,16 @@
     1972px 248px #fff, 1669px 1344px #ff5722, 1132px 406px #f44336,
     320px 1076px #cddc39, 126px 943px #ffeb3b, 263px 604px #ff5722,
     1546px 692px #f44336;
-  animation: animSqu 80s linear infinite;
+  animation: animSquToDown 120s linear infinite;
   z-index: 1;
 }
 
-@keyframes animSqu {
+@keyframes animSquToDown {
   0% {
-    transform: translateY(0px);
+    transform: translateY(-5000px);
   }
 
   100% {
-    transform: translateY(-2000px);
+    transform: translateY(0px);
   }
 }

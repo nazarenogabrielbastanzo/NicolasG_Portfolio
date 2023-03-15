@@ -1,4 +1,78 @@
 .container__skills {
-  height: 20rem;
+  height: 42rem;
   background-color: transparent;
+}
+
+.container-computer__skills {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.computer__skills {
+  width: 15rem;
+  height: 35rem;
+  border: #aaa solid 5px;
+  border-radius: 10px;
+}
+
+.container-display__skills {
+  height: 90%;
+  width: 100%;
+  background-image: url("../../assets//img/phone.jpg");
+  background-size: 100%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.container-controls__skills {
+  height: 10%;
+  width: 100%;
+  background-color: #000000;
+  border-top: #aaa solid 2px;
+  border-bottom-right-radius: 5.5px;
+  border-bottom-left-radius: 5.5px;
+}
+
+.controls__skills {
+  width: 33.33%;
+}
+
+.control-options__skills {
+  width: 15px;
+  height: 15px;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+}
+
+.control-home__skills {
+  width: 15px;
+  height: 15px;
+  background-color: #e6e6e6;
+  border-radius: 50%;
+}
+
+.control-back__skills {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #e6e6e6;
+  border-left: 10px solid transparent;
+}
+
+.container-icon-skills {
+  height: 5rem;
+  width: 30%;
+  margin: 0.1rem;
+  cursor: pointer;
+}
+
+.container-icon-skills:hover {
+  background-color: rgba(0, 0, 255, 0.5);
+  outline: 2px dashed rgb(0, 150, 255);
+}
+
+.icons__skills {
+  width: 30px;
 }

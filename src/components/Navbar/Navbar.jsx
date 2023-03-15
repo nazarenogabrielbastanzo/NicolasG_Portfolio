@@ -33,15 +33,14 @@ const Navbar = () => {
   return (
     <nav className="navbar fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#Banner">
-          Nicolas GG
-        </a>
+        <div></div>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
+          style={{ backgroundColor: "#ffffff" }}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -52,9 +51,7 @@ const Navbar = () => {
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header">
-            <a className="navbar-brand" href="#Banner">
-              Nicolas GG
-            </a>
+            <div></div>
             <button
               type="button"
               className="btn-close"
