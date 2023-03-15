@@ -2,3 +2,19 @@
   height: 42rem;
   background-color: transparent;
 }
+
+.title__banner {
+  color: #111111;
+  font-size: 3rem;
+}
+
+.animated-type__banner span {
+  color: #111111;
+  font-size: 1.5rem;
+}
+
+.logo__banner {
+  width: 10rem;
+  position: relative;
+  z-index: 2;
+}
