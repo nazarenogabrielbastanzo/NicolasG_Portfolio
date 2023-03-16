@@ -8,7 +8,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="container__contact p-3" id="Contact">
+    <div className="container__contact p-3" id="Contact">
       <h3 className="text-center">Contact</h3>
       <div className="d-flex flex-wrap">
         <div className="image-container__contact d-flex justify-content-center">
@@ -88,7 +88,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

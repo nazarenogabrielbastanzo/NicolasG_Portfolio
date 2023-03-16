@@ -69,10 +69,15 @@ const Navbar = () => {
                       aria-current="page"
                       href={element.to}
                     >
-                      <span className="me-2">{element.name}</span>
+                      <span>{element.name}</span>
                       <i
                         className={element.icon}
-                        style={{ color: "#1083d6" }}
+                        style={{
+                          color: "#1083d6",
+                          margin: "0.3rem",
+                          width: "2rem",
+                          textAlign: "center"
+                        }}
                       ></i>
                     </a>
                   </li>
