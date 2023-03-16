@@ -1,4 +1,38 @@
 .container__contact {
-  height: 42rem;
+  height: 53rem;
   background-color: transparent;
+}
+
+.image-container__contact {
+  width: 100%;
+}
+
+.image-container__contact img {
+  width: 15rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-container__contact {
+  width: 100%;
+}
+
+.box__contact {
+  border: 1px solid #1083d6;
+  padding: 0.5rem;
+  display: inline-block;
+  width: 10rem;
+  border-radius: 5px;
+}
+
+.button__contact {
+  width: 100%;
+  color: #f8f9fa;
+  background-color: #084977;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }

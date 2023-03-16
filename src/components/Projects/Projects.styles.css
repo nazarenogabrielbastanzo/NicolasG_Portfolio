@@ -4,3 +4,15 @@
   z-index: 2;
   position: relative;
 }
+
+.project-container__projects {
+  width: 100%;
+}
+
+.project-container__projects img {
+  width: 12rem;
+  position: relative;
+  z-index: 2;
+  outline: 1px solid #ffffff;
+  margin: 0.5rem;
+}
