@@ -1,10 +1,20 @@
 import React from "react";
 import Modal from "../Modal/Modal";
+import { useSelector, useDispatch } from "react-redux";
+import { setProject } from "../../store/slices/projects";
 import "./Projects.styles.css";
 
 const Projects = () => {
+  const { list: projects } = useSelector((state) => state.projects);
+
+  const dispatch = useDispatch();
+
   const filterProjects = (e) => {
     e.preventDefault();
+  };
+
+  const getProject = (project) => {
+    dispatch(setProject(project));
   };
 
   return (
@@ -33,16 +43,18 @@ const Projects = () => {
           </select>
         </form>
         <div className="project-container__projects d-flex flex-wrap justify-content-center">
-          <img
-            src="https://imagenes.elpais.com/resizer/3q6apbw66jUSRN3afDsPz3FOuFc=/980x980/cloudfront-eu-central-1.images.arcpublishing.com/prisa/Z6WN33YVLRCTPCATP7EAJ2ODLE.jpg"
-            alt="pendiente"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          />
-          <img
-            src="https://imagenes.elpais.com/resizer/3q6apbw66jUSRN3afDsPz3FOuFc=/980x980/cloudfront-eu-central-1.images.arcpublishing.com/prisa/Z6WN33YVLRCTPCATP7EAJ2ODLE.jpg"
-            alt="pendiente"
-          />
+          {projects.map((project) => {
+            return (
+              <img
+                src={project.image}
+                alt={project.title}
+                key={project.id}
+                onClick={() => getProject(project)}
+                data-bs-toggle="modal"
+                data-bs-target="#projectModal"
+              />
+            );
+          })}
         </div>
       </section>
       <Modal />

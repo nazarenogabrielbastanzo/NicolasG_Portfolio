@@ -7,8 +7,11 @@ import Projects from "../../components/Projects/Projects";
 import Contact from "../../components/Contact/Contact";
 import StarsToUp from "../../assets/backgrounds/StarsToUp/StarsToUp";
 import StarsToDown from "../../assets/backgrounds/StarsToDown/StarsToDown";
+import useRequest from "../../hooks/useRequest";
 
 const Home = () => {
+  useRequest();
+
   return (
     <div className="container__home">
       <Banner />

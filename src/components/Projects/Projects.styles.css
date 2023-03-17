@@ -17,3 +17,7 @@
   margin: 0.5rem;
   cursor: pointer;
 }
+
+.project-container__projects img:hover {
+  color: aqua;
+}
