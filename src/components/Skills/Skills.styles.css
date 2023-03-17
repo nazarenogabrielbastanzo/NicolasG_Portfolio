@@ -6,7 +6,7 @@
 .container-computer__skills {
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .computer__skills {

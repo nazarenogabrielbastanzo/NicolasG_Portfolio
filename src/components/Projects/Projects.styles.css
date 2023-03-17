@@ -1,7 +1,7 @@
 .container__projects {
   height: 42rem;
   background-color: #1083d6;
-  z-index: 2;
+  z-index: 3;
   position: relative;
 }
 
@@ -12,7 +12,8 @@
 .project-container__projects img {
   width: 12rem;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   outline: 1px solid #ffffff;
   margin: 0.5rem;
+  cursor: pointer;
 }

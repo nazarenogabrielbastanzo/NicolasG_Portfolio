@@ -10,7 +10,7 @@
 .image-container__contact img {
   width: 15rem;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .contact-container__contact {
