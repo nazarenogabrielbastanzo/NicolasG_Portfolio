@@ -1,0 +1,10 @@
+.switch__navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swtich-input__navbar {
+  height: 1.5rem;
+  width: 3rem !important;
+}

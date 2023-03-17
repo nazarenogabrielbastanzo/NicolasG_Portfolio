@@ -31,9 +31,26 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar fixed-top">
+    <nav className="navbar fixed-top p-3">
       <div className="container-fluid">
-        <div></div>
+        <div className="d-flex">
+          <div className="form-switch switch__navbar mx-4">
+            <input
+              className="form-check-input swtich-input__navbar"
+              type="checkbox"
+              role="switch"
+              id="language"
+            />
+          </div>
+          <div className="form-switch switch__navbar mx-4">
+            <input
+              className="form-check-input swtich-input__navbar"
+              type="checkbox"
+              role="switch"
+              id="language"
+            />
+          </div>
+        </div>
         <button
           className="navbar-toggler"
           type="button"

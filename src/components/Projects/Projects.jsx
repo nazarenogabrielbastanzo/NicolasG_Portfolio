@@ -2,6 +2,7 @@ import React from "react";
 import Modal from "../Modal/Modal";
 import { useSelector, useDispatch } from "react-redux";
 import { setProject } from "../../store/slices/projects";
+// import ReactPaginate from "react-paginate";
 import "./Projects.styles.css";
 
 const Projects = () => {
@@ -43,16 +44,23 @@ const Projects = () => {
           </select>
         </form>
         <div className="project-container__projects d-flex flex-wrap justify-content-center">
-          {projects.map((project) => {
+          {projects?.map((project) => {
             return (
-              <img
-                src={project.image}
-                alt={project.title}
-                key={project.id}
-                onClick={() => getProject(project)}
-                data-bs-toggle="modal"
-                data-bs-target="#projectModal"
-              />
+              <div className="item__projects" key={project.id}>
+                <div
+                  className="project-image__projects"
+                  style={{
+                    backgroundImage: `url(${project.image})`
+                  }}
+                  data-bs-target="#projectModal"
+                  data-bs-toggle="modal"
+                  onClick={() => getProject(project)}
+                >
+                  <div className="cover__projects">
+                    <p>INFO</p>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>
