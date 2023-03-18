@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./views/Home/Home";
 import NotFound from "./views/NotFound/NotFound.jsx";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import { Provider } from "react-redux";
 import store from "./store";

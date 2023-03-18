@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 import { useSelector, useDispatch } from "react-redux";
 import { setProject } from "../../store/slices/projects";
-// import ReactPaginate from "react-paginate";
+import ReactPaginate from "react-paginate";
 import "./Projects.styles.css";
 
 const Projects = () => {
+  const [currentItems, setCurrentItems] = useState(null);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(2);
+
   const { list: projects } = useSelector((state) => state.projects);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(projects.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(projects.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, projects]);
 
   const filterProjects = (e) => {
     e.preventDefault();
@@ -16,6 +27,11 @@ const Projects = () => {
 
   const getProject = (project) => {
     dispatch(setProject(project));
+  };
+
+  const handlePageClick = (e) => {
+    const newOffset = (e.selected * itemsPerPage) % projects.length;
+    setItemOffset(newOffset);
   };
 
   return (
@@ -44,7 +60,26 @@ const Projects = () => {
           </select>
         </form>
         <div className="project-container__projects d-flex flex-wrap justify-content-center">
-          {projects?.map((project) => {
+          {/* {projects?.map((project) => {
+            return (
+              <div className="item__projects" key={project.id}>
+                <div
+                  className="project-image__projects"
+                  style={{
+                    backgroundImage: `url(${project.image})`
+                  }}
+                  data-bs-target="#projectModal"
+                  data-bs-toggle="modal"
+                  onClick={() => getProject(project)}
+                >
+                  <div className="cover__projects">
+                    <p>INFO</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })} */}
+          {currentItems?.map((project) => {
             return (
               <div className="item__projects" key={project.id}>
                 <div
@@ -64,6 +99,21 @@ const Projects = () => {
             );
           })}
         </div>
+        <ReactPaginate
+          containerClassName="list"
+          breakClassName="points"
+          pageClassName="other-pages"
+          previousLinkClassName="previous-botton"
+          nextLinkClassName="next-botton"
+          breakLabel="..."
+          nextLabel=">"
+          onPageChange={handlePageClick}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={1}
+          pageCount={pageCount}
+          previousLabel="<"
+          renderOnZeroPageCount={null}
+        />
       </section>
       <Modal />
     </>
