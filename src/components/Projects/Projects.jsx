@@ -6,10 +6,11 @@ import ReactPaginate from "react-paginate";
 import "./Projects.styles.css";
 
 const Projects = () => {
+  let itemsPerPage = 2;
+
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(2);
 
   const { list: projects } = useSelector((state) => state.projects);
 
@@ -38,7 +39,7 @@ const Projects = () => {
     <>
       <section className="container__projects p-3" id="Projects">
         <h3 className="text-center text-light">Projects</h3>
-        <form onSubmit={(e) => filterProjects(e)}>
+        <form onSubmit={(e) => filterProjects(e)} className="mt-4 mb-4">
           <select
             className="form-select mb-3"
             aria-label="Default select example"
@@ -59,26 +60,7 @@ const Projects = () => {
             <option value="laravel">Laravel (PHP) </option>
           </select>
         </form>
-        <div className="project-container__projects d-flex flex-wrap justify-content-center">
-          {/* {projects?.map((project) => {
-            return (
-              <div className="item__projects" key={project.id}>
-                <div
-                  className="project-image__projects"
-                  style={{
-                    backgroundImage: `url(${project.image})`
-                  }}
-                  data-bs-target="#projectModal"
-                  data-bs-toggle="modal"
-                  onClick={() => getProject(project)}
-                >
-                  <div className="cover__projects">
-                    <p>INFO</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })} */}
+        <div className="project-container__projects d-flex flex-wrap justify-content-center mb-4 mt-4">
           {currentItems?.map((project) => {
             return (
               <div className="item__projects" key={project.id}>
@@ -99,21 +81,23 @@ const Projects = () => {
             );
           })}
         </div>
-        <ReactPaginate
-          containerClassName="list"
-          breakClassName="points"
-          pageClassName="other-pages"
-          previousLinkClassName="previous-botton"
-          nextLinkClassName="next-botton"
-          breakLabel="..."
-          nextLabel=">"
-          onPageChange={handlePageClick}
-          marginPagesDisplayed={1}
-          pageRangeDisplayed={1}
-          pageCount={pageCount}
-          previousLabel="<"
-          renderOnZeroPageCount={null}
-        />
+        <nav className="pagination rounded-pill mt-4 d-flex align-items-center">
+          <ReactPaginate
+            containerClassName="list"
+            breakClassName="points"
+            pageClassName="other-pages"
+            previousLinkClassName="previous-botton"
+            nextLinkClassName="next-botton"
+            breakLabel="..."
+            nextLabel=">"
+            onPageChange={handlePageClick}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={1}
+            pageCount={pageCount}
+            previousLabel="<"
+            renderOnZeroPageCount={null}
+          />
+        </nav>
       </section>
       <Modal />
     </>

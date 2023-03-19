@@ -84,7 +84,12 @@ const Contact = () => {
               ></textarea>
               <label htmlFor="message">Message</label>
             </div>
-            <button className="button__contact">Send</button>
+            <button
+              className="button__contact"
+              style={{ position: "relative", zIndex: "3" }}
+            >
+              Send
+            </button>
           </form>
         </div>
       </div>

@@ -15,11 +15,12 @@
   position: relative;
   z-index: 3;
   outline: 1px solid #ffffff;
-  margin: 0.5rem;
+  margin: 1rem;
   cursor: pointer;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 1rem;
 }
 
 .item__projects .box {
@@ -53,4 +54,39 @@
 
 .item__projects:hover .cover__projects {
   opacity: 1;
+}
+
+.pagination {
+  background-color: #084977;
+  height: 3rem;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pagination ul {
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  width: 1.3rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.2rem;
+}
+
+.pagination .next-botton,
+.previous-botton {
+  color: #ffffff;
+}
+
+.pagination .selected {
+  background-color: #1083d6;
+  border-radius: 1rem;
 }
