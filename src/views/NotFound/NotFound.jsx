@@ -2,8 +2,11 @@ import React from "react";
 import Typed from "react-typed";
 import { useNavigate } from "react-router-dom";
 import "./NotFound.styles.css";
+import { useTranslation } from "react-i18next";
 
 const NotFound = () => {
+  const [t] = useTranslation("global");
+
   const navigate = useNavigate();
 
   const goHome = () => {
@@ -14,14 +17,14 @@ const NotFound = () => {
     <div className="background">
       <p className="text-center numbers__404">404</p>
       <p className="text-center animated-type__404">
-        <Typed strings={["You are alone here."]} typeSpeed={150}></Typed>
+        <Typed strings={[t("404.string")]} typeSpeed={150}></Typed>
       </p>
       <div className="button__404 text-center">
         <button
           className="p-2 bg-transparent text-white border border-white rounded"
           onClick={goHome}
         >
-          Back to Home
+          {t("404.title")}
         </button>
       </div>
       <div>

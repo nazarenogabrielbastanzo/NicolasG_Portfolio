@@ -1,0 +1,56 @@
+{
+  "banner": {
+    "title": "Hi! I'm Nicolas GG",
+    "string1": "I'm a FrontEnd Developer",
+    "string2": "I'm a BackEnd Developer",
+    "string3": "I'm a FullStack Developer"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact me"
+  },
+  "about": {
+    "title": "About me",
+    "string1": "I am a developer from Colombia who is interested in web technologies, especially backend development. I was graduated of Academlo Bootcamp as a Full Stack Developer and the University (UTP) in the MisionTic 2022 government program.",
+    "string2": "I develop my skills as an autodidact in online platforms as Udemy, Official Documentation and Stack OverFlow (Youtube and ChatGPT too but Shh! 🤫). I participated in the No Country program developing the backend of the Fashion Hunter app and I worked for eight months for the company BRM as a full stack developer."
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "projects": {
+    "title": "Projects",
+    "roles": {
+      "option1": "All Roles",
+      "option2": "Full Stack",
+      "option3": "FronEnd",
+      "option4": "BackEnd"
+    },
+    "technologies": {
+      "option1": "All Technologies",
+      "option2": "ReactJs (JS)",
+      "option3": "VueJs (JS)",
+      "option4": "ExpressJs (JS)",
+      "option5": "Laravel (PHP)"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "whatsapp": "Send Whatsapp",
+    "or": "Or",
+    "email": "Send Email",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "button": "Send"
+    }
+  },
+  "404": {
+    "string": "You are alone here.",
+    "title": "Back to Home"
+  }
+}

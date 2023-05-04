@@ -13,8 +13,11 @@ import SQL from "../../assets/icon/SQL.png";
 import Railway from "../../assets/icon/Railway.png";
 import ReactIcon from "../../assets/icon/React.png";
 import "./Skills.styles.css";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+  const [t] = useTranslation("global");
+
   const skills = [
     {
       name: "Html",
@@ -88,7 +91,7 @@ const Skills = () => {
 
   return (
     <section className="container__skills p-3" id="Skills">
-      <h3 className="text-center">Skills</h3>
+      <h3 className="text-center">{t("skills.title")}</h3>
       <div className="container-computer__skills d-flex justify-content-center">
         <div className="computer__skills m-2">
           <div className="container-display__skills d-flex flex-wrap p-2">

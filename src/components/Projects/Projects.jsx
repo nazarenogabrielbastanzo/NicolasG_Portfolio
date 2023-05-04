@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 import { useSelector, useDispatch } from "react-redux";
-import { setProject } from "../../store/slices/projects";
+import { setProject } from "../../store/slices/projectSlice";
 import ReactPaginate from "react-paginate";
+import { useTranslation } from "react-i18next";
 import "./Projects.styles.css";
 
 const Projects = () => {
@@ -12,7 +13,9 @@ const Projects = () => {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
-  const { list: projects } = useSelector((state) => state.projects);
+  const [t] = useTranslation("global");
+
+  const { list: projects } = useSelector((state) => state.projectSlice);
 
   const dispatch = useDispatch();
 
@@ -35,29 +38,76 @@ const Projects = () => {
     setItemOffset(newOffset);
   };
 
+  const roleOptions = [
+    {
+      option: t("projects.roles.option1"),
+      value: "all"
+    },
+    {
+      option: t("projects.roles.option2"),
+      value: "full"
+    },
+    {
+      option: t("projects.roles.option3"),
+      value: "front"
+    },
+    {
+      option: t("projects.roles.option4"),
+      value: "back"
+    }
+  ];
+
+  const technologiesOptions = [
+    {
+      option: t("projects.technologies.option1"),
+      value: "all"
+    },
+    {
+      option: t("projects.technologies.option2"),
+      value: "react"
+    },
+    {
+      option: t("projects.technologies.option3"),
+      value: "vue"
+    },
+    {
+      option: t("projects.technologies.option4"),
+      value: "express"
+    },
+    {
+      option: t("projects.technologies.option5"),
+      value: "laravel"
+    }
+  ];
+
   return (
     <>
       <section className="container__projects p-3" id="Projects">
-        <h3 className="text-center text-light">Projects</h3>
+        <h3 className="text-center text-light">{t("projects.title")}</h3>
         <form onSubmit={(e) => filterProjects(e)} className="mt-4 mb-4">
           <select
             className="form-select mb-3"
             aria-label="Default select example"
           >
-            <option value="all">All Roles</option>
-            <option value="full">Full Stack</option>
-            <option value="front">FronEnd</option>
-            <option value="back">BackEnd</option>
+            {roleOptions.map((element, index) => {
+              return (
+                <option value={element.value} key={index}>
+                  {element.option}
+                </option>
+              );
+            })}
           </select>
           <select
             className="form-select mb-3"
             aria-label="Default select example"
           >
-            <option value="all">All Technologies</option>
-            <option value="react">ReactJs (JS) </option>
-            <option value="vue">VueJs (JS) </option>
-            <option value="express">ExpressJs (JS)</option>
-            <option value="laravel">Laravel (PHP) </option>
+            {technologiesOptions.map((element, index) => {
+              return (
+                <option value={element.value} key={index}>
+                  {element.option}
+                </option>
+              );
+            })}
           </select>
         </form>
         <div className="project-container__projects d-flex flex-wrap justify-content-center mb-4 mt-4">

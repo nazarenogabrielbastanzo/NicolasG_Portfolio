@@ -1,34 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { setLanguage as setLanguageAction } from "../../store/slices/languageSlice";
+
 import "./Navbar.styles.css";
 
 const Navbar = () => {
+  const [t, i18n] = useTranslation("global");
+  const [language, setLanguage] = useState(false);
+
+  const dispatch = useDispatch();
+
   const navigation = [
     {
-      name: "Home",
+      name: t("nav.home"),
       to: "#Banner",
       icon: "fs-1 fa-solid fa-square-h"
     },
     {
-      name: "About me",
+      name: t("nav.about"),
       to: "#About",
       icon: "fs-1 fa-solid fa-address-card"
     },
     {
-      name: "Skills",
+      name: t("nav.skills"),
       to: "#Skills",
       icon: "fs-1 fa-sharp fa-solid fa-gears"
     },
     {
-      name: "Projects",
+      name: t("nav.projects"),
       to: "#Projects",
       icon: "fs-1 fa-solid fa-boxes-stacked"
     },
     {
-      name: "Contact me",
+      name: t("nav.contact"),
       to: "#Contact",
       icon: "fs-1 fa-solid fa-envelope"
     }
   ];
+
+  useEffect(() => {
+    if (language) {
+      dispatch(setLanguageAction("es"));
+      i18n.changeLanguage("es");
+    } else {
+      dispatch(setLanguageAction("en"));
+      i18n.changeLanguage("en");
+    }
+  }, [language, i18n, dispatch]);
 
   return (
     <nav className="navbar fixed-top p-3">
@@ -48,6 +67,7 @@ const Navbar = () => {
               type="checkbox"
               role="switch"
               id="language"
+              onChange={() => setLanguage(!language)}
             />
           </div>
         </div>

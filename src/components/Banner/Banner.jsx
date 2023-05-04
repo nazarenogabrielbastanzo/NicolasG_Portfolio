@@ -1,9 +1,12 @@
 import React from "react";
 import Typed from "react-typed";
 import Logo from "../../assets/icon/Logo.png";
+import { useTranslation } from "react-i18next";
 import "./Banner.styles.css";
 
 const Banner = () => {
+  const [t] = useTranslation("global");
+
   return (
     <section
       className="container__banner d-flex align-items-center p-3"
@@ -13,13 +16,13 @@ const Banner = () => {
         <div className="text-center w-100 m-0 animated-type__banner">
           <img className="logo__banner" src={Logo} alt="nicolasggLogo" />
           <h1 className="title__banner">
-            <b>Hi! I'm Nicolas GG</b>
+            <b>{t("banner.title")}</b>
           </h1>
           <Typed
             strings={[
-              "I'm a FrontEnd Developer",
-              "I'm a BackEnd Developer",
-              "I'm a FullStack Developer"
+              t("banner.string1"),
+              t("banner.string2"),
+              t("banner.string3")
             ]}
             typeSpeed={150}
             backSpeed={100}

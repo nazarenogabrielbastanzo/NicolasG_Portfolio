@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setProjectList } from "../store/slices/projects";
+import { setProjectList } from "../store/slices/projectSlice";
 
 const useRequest = () => {
   const dispatch = useDispatch();

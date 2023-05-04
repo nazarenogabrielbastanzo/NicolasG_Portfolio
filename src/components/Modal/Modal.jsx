@@ -4,7 +4,9 @@ import { useSelector } from "react-redux";
 import "./Modal.styles.css";
 
 const Modal = () => {
-  const { project } = useSelector((state) => state.projects);
+  const { project } = useSelector((state) => state.projectSlice);
+
+  const { language } = useSelector((state) => state.languageSlice);
 
   return (
     <div
@@ -39,7 +41,11 @@ const Modal = () => {
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
-                    <p className="card-text">{project.englishDescription}</p>
+                    <p className="card-text">
+                      {language === "en"
+                        ? project.englishDescription
+                        : project.spanisDescription}
+                    </p>
                   </div>
                 </div>
               </div>
