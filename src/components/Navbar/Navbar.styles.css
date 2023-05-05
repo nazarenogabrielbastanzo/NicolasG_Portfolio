@@ -1,10 +1,69 @@
-.switch__navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swtich-input__navbar {
+.switch-input__navbar {
+  opacity: 0;
   height: 1.5rem;
   width: 3rem !important;
+}
+
+.switch__navbar {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.switch__navbar label {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 34px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.switch__navbar label::before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+.switch__navbar input:checked + label {
+  background-color: #1083d6;
+}
+
+.switch__navbar input:checked + label::before {
+  transform: translateX(26px);
+}
+
+.switch__navbar label:after {
+  content: "EN";
+  font-size: 14px;
+  text-align: right;
+  padding-right: 0.6rem;
+  line-height: 32px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.switch__navbar input:checked + label:after {
+  content: "ES";
+  color: #ffffff;
+  text-align: left;
+  padding-left: 0.6rem;
 }

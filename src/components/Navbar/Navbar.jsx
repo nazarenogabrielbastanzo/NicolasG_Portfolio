@@ -53,22 +53,24 @@ const Navbar = () => {
     <nav className="navbar fixed-top p-3">
       <div className="container-fluid">
         <div className="d-flex">
-          <div className="form-switch switch__navbar mx-4">
+          <div class="form-switch switch__navbar mx-3">
             <input
-              className="form-check-input swtich-input__navbar"
+              class="form-check-input switch-input__navbar"
               type="checkbox"
               role="switch"
-              id="language"
+              id="theme"
             />
+            <label for="theme"></label>
           </div>
-          <div className="form-switch switch__navbar mx-4">
+          <div class="form-switch switch__navbar mx-3">
             <input
-              className="form-check-input swtich-input__navbar"
+              class="form-check-input switch-input__navbar"
               type="checkbox"
               role="switch"
               id="language"
               onChange={() => setLanguage(!language)}
             />
+            <label for="language"></label>
           </div>
         </div>
         <button

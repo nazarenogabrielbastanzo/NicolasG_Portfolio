@@ -131,7 +131,7 @@ const Projects = () => {
             );
           })}
         </div>
-        <nav className="pagination rounded-pill mt-4 d-flex align-items-center">
+        <nav className="pagination rounded-pill mt-5 d-flex align-items-center">
           <ReactPaginate
             containerClassName="list"
             breakClassName="points"

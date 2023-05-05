@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import Profile from "../../assets/img/profile/My project-1(JPG)LowSize.jpg";
 import "./About.styles.css";
 
 const About = () => {
   const [documents, setDocuments] = useState([]);
   const [urlDownload, setUrlDownload] = useState("");
+
+  const { language } = useSelector((state) => state.languageSlice);
 
   const [t] = useTranslation("global");
 
@@ -51,7 +54,7 @@ const About = () => {
           })}
           <a
             className="download__about"
-            onClick={() => download("en")} // Pending do it dinamic
+            onClick={() => download(language)}
             href={urlDownload}
             download
           >

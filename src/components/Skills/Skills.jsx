@@ -91,7 +91,7 @@ const Skills = () => {
 
   return (
     <section className="container__skills p-3" id="Skills">
-      <h3 className="text-center">{t("skills.title")}</h3>
+      <h3 className="text-center mb-4">{t("skills.title")}</h3>
       <div className="container-computer__skills d-flex justify-content-center">
         <div className="computer__skills m-2">
           <div className="container-display__skills d-flex flex-wrap p-2">
