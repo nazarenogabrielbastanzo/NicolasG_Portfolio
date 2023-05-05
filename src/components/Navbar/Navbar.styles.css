@@ -67,3 +67,71 @@
   text-align: left;
   padding-left: 0.6rem;
 }
+
+.theme-switch__navbar {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-toggle__navbar {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch-label__navbar {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 34px;
+  background-color: #555;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.theme-switch-label__navbar i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.theme-switch-label__navbar .fa-moon {
+  left: 10px;
+}
+
+.theme-switch-label__navbar .fa-sun {
+  right: 10px;
+}
+
+.theme-toggle__navbar:checked + .theme-switch-label__navbar {
+  background-color: #ccc;
+}
+
+.theme-toggle__navbar + .theme-switch-label__navbar .fa-moon {
+  color: #f1c40f;
+}
+
+.theme-toggle__navbar + .theme-switch-label__navbar .fa-sun {
+  color: #f39c12;
+}
+
+.theme-toggle__navbar:checked + .theme-switch-label__navbar .fa-moon {
+  color: white;
+}
+
+.theme-toggle__navbar:checked + .theme-switch-label__navbar .fa-sun {
+  color: white;
+}
+
+.theme-toggle__navbar:checked + .theme-switch-label__navbar::before {
+  transform: translateX(26px);
+  background-color: black;
+}

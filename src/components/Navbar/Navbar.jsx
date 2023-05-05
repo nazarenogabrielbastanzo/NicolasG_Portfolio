@@ -8,6 +8,7 @@ import "./Navbar.styles.css";
 const Navbar = () => {
   const [t, i18n] = useTranslation("global");
   const [language, setLanguage] = useState(false);
+  const [isLigth, setIsLigth] = useState(true);
 
   const dispatch = useDispatch();
 
@@ -49,28 +50,43 @@ const Navbar = () => {
     }
   }, [language, i18n, dispatch]);
 
+  useEffect(() => {
+    if (isLigth) {
+      console.log("The theme is light");
+    } else {
+      console.log("The theme is dark");
+    }
+  }, [isLigth]);
+
   return (
     <nav className="navbar fixed-top p-3">
       <div className="container-fluid">
         <div className="d-flex">
-          <div class="form-switch switch__navbar mx-3">
+          <div className="theme-switch__navbar mx-3">
             <input
-              class="form-check-input switch-input__navbar"
               type="checkbox"
-              role="switch"
-              id="theme"
+              id="theme-toggle"
+              className="theme-toggle__navbar"
+              onChange={() => setIsLigth(!isLigth)}
             />
-            <label for="theme"></label>
+            <label
+              htmlFor="theme-toggle"
+              className="theme-switch-label__navbar"
+            >
+              <i className="fas fa-moon"></i>
+              <i className="fas fa-sun"></i>
+            </label>
           </div>
-          <div class="form-switch switch__navbar mx-3">
+
+          <div className="switch__navbar mx-3">
             <input
-              class="form-check-input switch-input__navbar"
+              className="form-check-input switch-input__navbar"
               type="checkbox"
               role="switch"
               id="language"
               onChange={() => setLanguage(!language)}
             />
-            <label for="language"></label>
+            <label htmlFor="language"></label>
           </div>
         </div>
         <button
