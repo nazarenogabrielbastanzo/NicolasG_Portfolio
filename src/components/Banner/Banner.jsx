@@ -1,6 +1,7 @@
 import React from "react";
 import Typed from "react-typed";
-import Logo from "../../assets/icon/Logo.png";
+// import Logo from "../../assets/logo/Logo.png";
+import Logo from "../../assets/logo/Recurso2x.png";
 import { useTranslation } from "react-i18next";
 import "./Banner.styles.css";
 
