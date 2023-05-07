@@ -33,7 +33,7 @@
   top: 4px;
   left: 4px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #f8f9fa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
   z-index: 1;
@@ -100,7 +100,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: white;
+  color: #f8f9fa;
 }
 
 .theme-switch-label__navbar .fa-moon {
@@ -124,14 +124,34 @@
 }
 
 .theme-toggle__navbar:checked + .theme-switch-label__navbar .fa-moon {
-  color: white;
+  color: #f8f9fa;
 }
 
 .theme-toggle__navbar:checked + .theme-switch-label__navbar .fa-sun {
-  color: white;
+  color: #f8f9fa;
 }
 
 .theme-toggle__navbar:checked + .theme-switch-label__navbar::before {
   transform: translateX(26px);
   background-color: black;
+}
+
+.offcanvas {
+  background-color: transparent;
+}
+
+.offcanvas-body,
+.offcanvas-header {
+  background-color: #00000042;
+}
+
+.button__navbar {
+  background-color: transparent;
+  border: none;
+}
+
+.button-text__navbar {
+  /* color: #1083d6; */
+  color: #f8f9fa;
+  font-size: 1.5rem;
 }

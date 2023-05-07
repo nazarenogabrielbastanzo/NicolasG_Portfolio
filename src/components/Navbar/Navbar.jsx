@@ -112,22 +112,24 @@ const Navbar = () => {
             <div></div>
             <button
               type="button"
-              className="btn-close"
+              className="button__navbar"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
-            ></button>
+            >
+              <span className="button-text__navbar">{/* <b>X</b> */}X</span>
+            </button>
           </div>
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               {navigation.map((element, index) => {
                 return (
-                  <li key={index} data-bs-dismiss="offcanvas">
+                  <li key={index}>
                     <a
                       className="nav-link text-end d-flex justify-content-end align-items-center"
                       aria-current="page"
                       href={element.to}
                     >
-                      <span>{element.name}</span>
+                      <span style={{ color: "#f8f9fa" }}>{element.name}</span>
                       <i
                         className={element.icon}
                         style={{
