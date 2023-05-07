@@ -92,7 +92,7 @@ const NotFound = () => {
               ></stop>
               <stop
                 offset="50%"
-                style={{ stopColor: "#EDEDED", stopOpacity: "0.5" }}
+                style={{ stopColor: "#f8f9fa", stopOpacity: "0.5" }}
               >
                 <animate
                   attributeName="stop-opacity"
@@ -103,7 +103,7 @@ const NotFound = () => {
               </stop>
               <stop
                 offset="100%"
-                style={{ stopColor: "#EDEDED", stopOpacity: "0" }}
+                style={{ stopColor: "#f8f9fa", stopOpacity: "0" }}
               ></stop>
             </radialGradient>
             <circle

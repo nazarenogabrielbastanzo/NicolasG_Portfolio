@@ -14,9 +14,12 @@ import Railway from "../../assets/icon/Railway.png";
 import ReactIcon from "../../assets/icon/React.png";
 import "./Skills.styles.css";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const Skills = () => {
   const [t] = useTranslation("global");
+
+  const { theme } = useSelector((state) => state.generalSlice);
 
   const skills = [
     {
@@ -90,8 +93,10 @@ const Skills = () => {
   ];
 
   return (
-    <section className="container__skills p-3" id="Skills">
-      <h3 className="text-center mb-4">{t("skills.title")}</h3>
+    <section className={`container__skills p-3 ${theme}__skills `} id="Skills">
+      <h3 className={`text-center mb-4 ${theme}-text__skills `}>
+        {t("skills.title")}
+      </h3>
       <div className="container-computer__skills d-flex justify-content-center">
         <div className="computer__skills m-2">
           <div className="container-display__skills d-flex flex-wrap p-2">

@@ -1,6 +1,21 @@
 .container__skills {
   height: 45rem;
+}
+
+.dark__skills {
+  background-color: #212e36;
+}
+
+.light__skills {
   background-color: transparent;
+}
+
+.dark-text__skills {
+  color: #f8f9fa;
+}
+
+.light-text__skills {
+  color: #000000;
 }
 
 .container-computer__skills {

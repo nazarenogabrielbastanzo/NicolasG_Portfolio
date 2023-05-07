@@ -63,7 +63,7 @@
 
 .switch__navbar input:checked + label:after {
   content: "ES";
-  color: #ffffff;
+  color: #f8f9fa;
   text-align: left;
   padding-left: 0.6rem;
 }

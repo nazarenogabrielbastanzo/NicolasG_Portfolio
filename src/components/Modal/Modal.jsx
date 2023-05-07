@@ -6,7 +6,7 @@ import "./Modal.styles.css";
 const Modal = () => {
   const { project } = useSelector((state) => state.projectSlice);
 
-  const { language } = useSelector((state) => state.languageSlice);
+  const { language } = useSelector((state) => state.generalSlice);
 
   return (
     <div

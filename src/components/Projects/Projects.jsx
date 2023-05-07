@@ -17,6 +17,8 @@ const Projects = () => {
 
   const { list: projects } = useSelector((state) => state.projectSlice);
 
+  const { theme } = useSelector((state) => state.generalSlice);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -82,8 +84,13 @@ const Projects = () => {
 
   return (
     <>
-      <section className="container__projects p-3" id="Projects">
-        <h3 className="text-center text-light">{t("projects.title")}</h3>
+      <section
+        className={`container__projects p-3 ${theme}__projects`}
+        id="Projects"
+      >
+        <h3 className={`text-center ${theme}-text__projects`}>
+          {t("projects.title")}
+        </h3>
         <form onSubmit={(e) => filterProjects(e)} className="mt-4 mb-4">
           <select
             className="form-select mb-3"
@@ -131,7 +138,9 @@ const Projects = () => {
             );
           })}
         </div>
-        <nav className="pagination rounded-pill mt-5 d-flex align-items-center">
+        <nav
+          className={`pagination rounded-pill mt-5 d-flex align-items-center ${theme}-pagination__projects`}
+        >
           <ReactPaginate
             containerClassName="list"
             breakClassName="points"

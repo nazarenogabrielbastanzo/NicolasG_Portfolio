@@ -9,7 +9,7 @@ const About = () => {
   const [documents, setDocuments] = useState([]);
   const [urlDownload, setUrlDownload] = useState("");
 
-  const { language } = useSelector((state) => state.languageSlice);
+  const { language, theme } = useSelector((state) => state.generalSlice);
 
   const [t] = useTranslation("global");
 
@@ -38,8 +38,8 @@ const About = () => {
   ];
 
   return (
-    <section className="container__about p-3" id="About">
-      <h3 className="text-center text-light">{t("about.title")}</h3>
+    <section className={`container__about p-3 ${theme}__about`} id="About">
+      <h3 className={`text-center ${theme}-text__about`}>{t("about.title")}</h3>
       <div className="d-flex flex-wrap">
         <div className="profile-container__about d-flex justify-content-center">
           <img className="m-1" src={Profile} alt="nicolasProfile" />
@@ -47,13 +47,13 @@ const About = () => {
         <div>
           {texts.map((element, index) => {
             return (
-              <p className="text-light" key={index}>
+              <p className={`${theme}-text__about`} key={index}>
                 {element.string}
               </p>
             );
           })}
           <a
-            className="download__about"
+            className={`download__about ${theme}-button__about`}
             onClick={() => download(language)}
             href={urlDownload}
             download

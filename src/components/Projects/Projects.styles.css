@@ -1,6 +1,5 @@
 .container__projects {
   height: 45rem;
-  background-color: #1083d6;
   z-index: 3;
   position: relative;
 }
@@ -14,7 +13,7 @@
   height: 10rem;
   position: relative;
   z-index: 3;
-  outline: 1px solid #ffffff;
+  outline: 1px solid #f8f9fa;
   margin: 1rem;
   cursor: pointer;
   background-size: 100% 100%;
@@ -57,7 +56,6 @@
 }
 
 .pagination {
-  background-color: #084977;
   height: 3rem;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
@@ -77,16 +75,57 @@
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   text-align: center;
-  color: #ffffff;
   padding: 0.2rem;
 }
 
-.pagination .next-botton,
-.previous-botton {
-  color: #ffffff;
+.dark__projects {
+  background-color: #0062a8;
 }
 
-.pagination .selected {
+.light__projects {
+  background-color: #4ba4e4;
+}
+
+.dark-text__projects {
+  color: #f8f9fa;
+}
+
+.light-text__projects {
+  color: #000000;
+}
+
+.dark-pagination__projects {
+  background-color: #4ba4e4;
+}
+
+.light-pagination__projects {
+  background-color: #084977;
+}
+
+.light-pagination__projects .next-botton,
+.light-pagination__projects .previous-botton {
+  color: #f8f9fa;
+}
+
+.dark-pagination__projects .next-botton,
+.dark-pagination__projects .previous-botton {
+  color: #000000;
+}
+
+.light-pagination__projects li {
+  color: #f8f9fa;
+}
+
+.dark-pagination__projects li {
+  color: #000000;
+}
+
+.dark-pagination__projects .selected {
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+}
+
+.light-pagination__projects .selected {
   background-color: #1083d6;
   border-radius: 1rem;
 }

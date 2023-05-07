@@ -1,6 +1,21 @@
 .container__contact {
   height: 53rem;
+}
+
+.dark__contact {
+  background-color: #212e36;
+}
+
+.light__contact {
   background-color: transparent;
+}
+
+.dark-text__contact {
+  color: #f8f9fa;
+}
+
+.light-text__contact {
+  color: #000000;
 }
 
 .image-container__contact {
@@ -27,12 +42,34 @@
 
 .button__contact {
   width: 100%;
-  color: #f8f9fa;
-  background-color: #084977;
   border: none;
   border-radius: 5px;
   padding: 0.3rem;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  z-index: 3;
+}
+
+.dark-button__contact {
+  background-color: #4ba4e4;
+  color: #000000;
+}
+
+.light-button__contact {
+  background-color: #084977;
+  color: #f8f9fa;
+}
+
+.image__contact {
+  border-radius: 0.5rem;
+}
+
+.dark-image__contact {
+  background-color: #f8f9fa;
+}
+
+.light-image__contact {
+  background-color: transparent;
 }

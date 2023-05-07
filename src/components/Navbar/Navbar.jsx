@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { setLanguage as setLanguageAction } from "../../store/slices/languageSlice";
+import {
+  setLanguage as setLanguageAction,
+  setTheme
+} from "../../store/slices/generalSlice";
 
 import "./Navbar.styles.css";
 
@@ -52,11 +55,11 @@ const Navbar = () => {
 
   useEffect(() => {
     if (isLigth) {
-      console.log("The theme is light");
+      dispatch(setTheme("light"));
     } else {
-      console.log("The theme is dark");
+      dispatch(setTheme("dark"));
     }
-  }, [isLigth]);
+  }, [isLigth, dispatch]);
 
   return (
     <nav className="navbar fixed-top p-3">
@@ -95,7 +98,7 @@ const Navbar = () => {
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
-          style={{ backgroundColor: "#ffffff" }}
+          style={{ backgroundColor: "#f8f9fa" }}
         >
           <span className="navbar-toggler-icon"></span>
         </button>

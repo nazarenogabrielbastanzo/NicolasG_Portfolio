@@ -1,8 +1,23 @@
 .container__about {
   height: 45rem;
-  background-color: #1083d6;
   z-index: 3;
   position: relative;
+}
+
+.dark__about {
+  background-color: #0062a8;
+}
+
+.light__about {
+  background-color: #4ba4e4;
+}
+
+.dark-text__about {
+  color: #f8f9fa;
+}
+
+.light-text__about {
+  color: #000000;
 }
 
 .profile-container__about {
@@ -16,11 +31,20 @@
 
 .download__about {
   color: #f8f9fa;
-  background-color: #084977;
   border: none;
   border-radius: 5px;
   padding: 0.3rem;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.dark-button__about {
+  background-color: #4ba4e4;
+  color: #000000;
+}
+
+.light-button__about {
+  background-color: #084977;
+  color: #f8f9fa;
 }

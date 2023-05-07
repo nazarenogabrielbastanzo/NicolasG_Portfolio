@@ -1,21 +1,30 @@
 import React from "react";
-import Message from "../../assets/img/undraw_Mobile_messages_re_yx8w.png";
+import Message from "../../assets/img/undraw_mobile_messages_re_yx8wv2.svg";
 import "./Contact.styles.css";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const Contact = () => {
   const [t] = useTranslation("global");
+
+  const { theme } = useSelector((state) => state.generalSlice);
 
   const sendEmail = (e) => {
     e.preventDefault();
   };
 
   return (
-    <div className="container__contact p-3" id="Contact">
-      <h3 className="text-center">{t("contact.title")}</h3>
+    <div className={`container__contact p-3 ${theme}__contact `} id="Contact">
+      <h3 className={`text-center ${theme}-text__contact`}>
+        {t("contact.title")}
+      </h3>
       <div className="d-flex flex-wrap">
         <div className="image-container__contact d-flex justify-content-center">
-          <img className="m-1" src={Message} alt="nicolasProfile" />
+          <img
+            className={`m-1 image__contact ${theme}-image__contact`}
+            src={Message}
+            alt="nicolasProfile"
+          />
         </div>
         <div className="contact-container__contact">
           <p className="text-center">
@@ -23,8 +32,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
               href="https://wa.me/573147974978"
-              style={{ color: "#000" }}
-              className="box__contact"
+              className={`box__contact mt-2 ${theme}-text__contact`}
             >
               {t("contact.whatsapp")}
               <i
@@ -33,12 +41,13 @@ const Contact = () => {
               ></i>
             </a>
           </p>
-          <p className="text-center">{t("contact.or")}</p>
+          <p className={`text-center ${theme}-text__contact`}>
+            {t("contact.or")}
+          </p>
           <p className="text-center ">
             <a
               href="mailto:nicolasggdev@gmail.com"
-              style={{ color: "#000" }}
-              className="box__contact"
+              className={`box__contact mt-2 ${theme}-text__contact`}
             >
               {t("contact.email")}
               <i
@@ -87,10 +96,7 @@ const Contact = () => {
               ></textarea>
               <label htmlFor="message">{t("contact.form.message")}</label>
             </div>
-            <button
-              className="button__contact"
-              style={{ position: "relative", zIndex: "3" }}
-            >
+            <button className={`button__contact ${theme}-button__contact`}>
               {t("contact.form.button")}
             </button>
           </form>

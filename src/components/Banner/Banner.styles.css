@@ -1,16 +1,31 @@
 .container__banner {
   height: 45rem;
+}
+
+.dark__banner {
+  background-color: #212e36;
+}
+
+.light__banner {
   background-color: transparent;
 }
 
 .title__banner {
-  color: #111111;
   font-size: 3rem;
 }
 
 .animated-type__banner span {
-  color: #111111;
   font-size: 1.5rem;
+}
+
+.dark-text__banner > span,
+.dark-text__banner > h1 {
+  color: #f8f9fa;
+}
+
+.light-text__banner > span,
+.light-text__banner > h1 {
+  color: #111111;
 }
 
 .logo__banner {
