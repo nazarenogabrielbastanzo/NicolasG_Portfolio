@@ -4,7 +4,8 @@ export const generalSlice = createSlice({
   name: "language",
   initialState: {
     language: "en",
-    theme: "light"
+    theme: "light",
+    isLoading: false
   },
   reducers: {
     setLanguage: (state, action) => {
@@ -12,10 +13,13 @@ export const generalSlice = createSlice({
     },
     setTheme: (state, action) => {
       state.theme = action.payload;
+    },
+    setIsLoading: (state, action) => {
+      state.isLoading = action.payload;
     }
   }
 });
 
-export const { setLanguage, setTheme } = generalSlice.actions;
+export const { setLanguage, setTheme, setIsLoading } = generalSlice.actions;
 
 export default generalSlice.reducer;

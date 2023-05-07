@@ -8,12 +8,32 @@ import Contact from "../../components/Contact/Contact";
 import StarsToUp from "../../utils/backgrounds/StarsToUp/StarsToUp";
 import StarsToDown from "../../utils/backgrounds/StarsToDown/StarsToDown";
 import useRequest from "../../hooks/useRequest";
+import Loader from "../../components/Loader/Loader";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Home = () => {
   useRequest();
 
+  const { isLoading } = useSelector((state) => state.generalSlice);
+
+  const [loader, setLoader] = useState(false);
+
+  useEffect(() => {
+    if (isLoading) {
+      setLoader(true);
+    } else {
+      setTimeout(() => {
+        setLoader(false);
+      }, 2000);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLoading]);
+
   return (
     <div className="container__home">
+      {loader && <Loader />}
       <Banner />
       <About />
       <Skills />

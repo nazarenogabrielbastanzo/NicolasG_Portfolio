@@ -1,3 +1,19 @@
+.container__spinner {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #00000094;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__spinner span {
+  position: fixed;
+  color: #f8f9fa;
+}
+
 .atom-spinner,
 .atom-spinner * {
   box-sizing: border-box;
@@ -19,7 +35,7 @@
 .atom-spinner .spinner-circle {
   display: block;
   position: absolute;
-  color: #084977;
+  color: #f8f9fa;
   font-size: calc(60px * 0.24);
   top: 50%;
   left: 50%;
@@ -34,7 +50,7 @@
   animation-duration: 1s;
   border-left-width: calc(60px / 25);
   border-top-width: calc(60px / 25);
-  border-left-color: #084977;
+  border-left-color: #f8f9fa;
   border-left-style: solid;
   border-top-style: solid;
   border-top-color: transparent;

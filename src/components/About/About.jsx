@@ -8,6 +8,7 @@ import "./About.styles.css";
 const About = () => {
   const [documents, setDocuments] = useState([]);
   const [urlDownload, setUrlDownload] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const { language, theme } = useSelector((state) => state.generalSlice);
 
@@ -16,13 +17,15 @@ const About = () => {
   useEffect(() => {
     axios
       .get("https://portfolio-api-nodejs-production.up.railway.app/api/v1/user")
-      .then((res) => setDocuments(res.data.data.document)) // Pending loader and modal when is success
+      .then((res) => setDocuments(res.data.data.document))
       .catch((err) => console.log(err));
   }, []);
 
   const download = (language) => {
+    setIsLoading(true);
     documents?.forEach((document) => {
       if (language === document.language) {
+        setIsLoading(false);
         setUrlDownload(document.document);
       }
     });
@@ -58,11 +61,23 @@ const About = () => {
             href={urlDownload}
             download
           >
-            <i
-              className="fa-solid fa-download"
-              style={{ margin: "0.5rem" }}
-            ></i>
-            <span>Download CV</span>
+            <span>
+              {isLoading ? (
+                <div className="d-flex justify-content-center">
+                  <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <i
+                    className="fa-solid fa-download"
+                    style={{ margin: "0.5rem" }}
+                  ></i>
+                  <span>Download CV</span>
+                </>
+              )}
+            </span>
           </a>
         </div>
       </div>

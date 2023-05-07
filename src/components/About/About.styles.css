@@ -31,12 +31,14 @@
 
 .download__about {
   color: #f8f9fa;
+  width: 10rem;
   border: none;
   border-radius: 5px;
   padding: 0.3rem;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  display: inline-block;
 }
 
 .dark-button__about {
