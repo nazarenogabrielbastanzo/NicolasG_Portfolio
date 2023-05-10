@@ -50,3 +50,8 @@
   background-color: #084977;
   color: #f8f9fa;
 }
+@media only screen and (min-width: 425px) {
+  .profile-container__about {
+    margin-bottom: 2rem;
+  }
+}

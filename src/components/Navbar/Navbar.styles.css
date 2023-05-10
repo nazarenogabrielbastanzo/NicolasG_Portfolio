@@ -151,7 +151,26 @@
 }
 
 .button-text__navbar {
-  /* color: #1083d6; */
   color: #f8f9fa;
   font-size: 1.5rem;
+}
+
+.item__navbar {
+  color: #f8f9fa;
+}
+
+@media only screen and (min-width: 576px) {
+  .light-offcanvas-body,
+  .light-offcanvas-header {
+    background-color: #f8f9fa !important;
+  }
+
+  .light-item__navbar {
+    color: #000000;
+  }
+
+  .light-button-text__navbar {
+    color: #1083d6;
+    font-size: 1.5rem;
+  }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   setLanguage as setLanguageAction,
   setTheme
@@ -14,6 +14,8 @@ const Navbar = () => {
   const [isLigth, setIsLigth] = useState(true);
 
   const dispatch = useDispatch();
+
+  const { theme } = useSelector((state) => state.generalSlice);
 
   const navigation = [
     {
@@ -108,7 +110,7 @@ const Navbar = () => {
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
-          <div className="offcanvas-header">
+          <div className={`offcanvas-header ${theme}-offcanvas-header`}>
             <div></div>
             <button
               type="button"
@@ -116,10 +118,14 @@ const Navbar = () => {
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             >
-              <span className="button-text__navbar">{/* <b>X</b> */}X</span>
+              <span
+                className={`button-text__navbar ${theme}-button-text__navbar`}
+              >
+                X
+              </span>
             </button>
           </div>
-          <div className="offcanvas-body">
+          <div className={`offcanvas-body ${theme}-offcanvas-body`}>
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               {navigation.map((element, index) => {
                 return (
@@ -129,7 +135,9 @@ const Navbar = () => {
                       aria-current="page"
                       href={element.to}
                     >
-                      <span style={{ color: "#f8f9fa" }}>{element.name}</span>
+                      <span className={`item__navbar ${theme}-item__navbar`}>
+                        {element.name}
+                      </span>
                       <i
                         className={element.icon}
                         style={{
