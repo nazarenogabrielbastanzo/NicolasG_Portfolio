@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  setLanguage as setLanguageAction,
-  setTheme
-} from "../../store/slices/generalSlice";
+import { useSelector } from "react-redux";
+import Switches from "../Switches/Switches";
 
 import "./Navbar.styles.css";
 
 const Navbar = () => {
-  const [t, i18n] = useTranslation("global");
-  const [language, setLanguage] = useState(false);
-  const [isLigth, setIsLigth] = useState(true);
-
-  const dispatch = useDispatch();
+  const [t] = useTranslation("global");
 
   const { theme } = useSelector((state) => state.generalSlice);
 
@@ -45,55 +38,12 @@ const Navbar = () => {
     }
   ];
 
-  useEffect(() => {
-    if (language) {
-      dispatch(setLanguageAction("es"));
-      i18n.changeLanguage("es");
-    } else {
-      dispatch(setLanguageAction("en"));
-      i18n.changeLanguage("en");
-    }
-  }, [language, i18n, dispatch]);
-
-  useEffect(() => {
-    if (isLigth) {
-      dispatch(setTheme("light"));
-    } else {
-      dispatch(setTheme("dark"));
-    }
-  }, [isLigth, dispatch]);
+  const id = "navbar";
 
   return (
-    <nav className="navbar fixed-top p-3">
+    <nav className="navbar fixed-top p-3 container__navbar">
       <div className="container-fluid">
-        <div className="d-flex">
-          <div className="theme-switch__navbar mx-3">
-            <input
-              type="checkbox"
-              id="theme-toggle"
-              className="theme-toggle__navbar"
-              onChange={() => setIsLigth(!isLigth)}
-            />
-            <label
-              htmlFor="theme-toggle"
-              className="theme-switch-label__navbar"
-            >
-              <i className="fas fa-moon"></i>
-              <i className="fas fa-sun"></i>
-            </label>
-          </div>
-
-          <div className="switch__navbar mx-3">
-            <input
-              className="form-check-input switch-input__navbar"
-              type="checkbox"
-              role="switch"
-              id="language"
-              onChange={() => setLanguage(!language)}
-            />
-            <label htmlFor="language"></label>
-          </div>
-        </div>
+        <Switches id={id} />
         <button
           className="navbar-toggler"
           type="button"

@@ -12,6 +12,8 @@ import Loader from "../../components/Loader/Loader";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
+import Switches from "../../components/Switches/Switches";
+import "./Home.styles.css";
 
 const Home = () => {
   useRequest();
@@ -31,6 +33,8 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoading]);
 
+  const id = "home";
+
   return (
     <div className="container__home">
       {loader && <Loader />}
@@ -41,6 +45,9 @@ const Home = () => {
       <Contact />
       <StarsToDown />
       <StarsToUp />
+      <div className="container-switch__home">
+        <Switches id={id} />
+      </div>
     </div>
   );
 };
