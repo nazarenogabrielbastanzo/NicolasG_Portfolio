@@ -50,7 +50,7 @@ const About = () => {
         <div>
           {texts.map((element, index) => {
             return (
-              <p className={`${theme}-text__about`} key={index}>
+              <p className={`${theme}-text__about p-text__about`} key={index}>
                 {element.string}
               </p>
             );

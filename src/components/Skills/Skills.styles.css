@@ -91,3 +91,16 @@
 .icons__skills {
   width: 30px;
 }
+
+@media only screen and (min-width: 768px) {
+  .container__skills {
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container__skills {
+    height: 100vh;
+  }
+}

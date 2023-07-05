@@ -50,8 +50,29 @@
   background-color: #084977;
   color: #f8f9fa;
 }
+
 @media only screen and (min-width: 425px) {
   .profile-container__about {
     margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .light-text__about,
+  .dark-text__about {
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container__about {
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container__about {
+    height: 100vh;
   }
 }

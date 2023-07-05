@@ -7,11 +7,10 @@ import { useTranslation } from "react-i18next";
 import "./Projects.styles.css";
 
 const Projects = () => {
-  let itemsPerPage = 2;
-
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(2);
 
   const [t] = useTranslation("global");
 
@@ -20,6 +19,26 @@ const Projects = () => {
   const { theme } = useSelector((state) => state.generalSlice);
 
   const dispatch = useDispatch();
+
+  const updateItemsPerPage = () => {
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth >= 576 && windowWidth < 992) {
+      setItemsPerPage(4);
+    } else {
+      setItemsPerPage(2);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateItemsPerPage);
+
+    updateItemsPerPage();
+
+    return () => {
+      window.removeEventListener("resize", updateItemsPerPage);
+    };
+  }, []);
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;

@@ -73,3 +73,16 @@
 .light-image__contact {
   background-color: transparent;
 }
+
+@media only screen and (min-width: 768px) {
+  .container__contact {
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container__contact {
+    height: 100vh;
+  }
+}
