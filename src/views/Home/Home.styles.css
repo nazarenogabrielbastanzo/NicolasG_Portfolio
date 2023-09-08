@@ -1,0 +1,13 @@
+.container-switch__home {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 20;
+}
+
+@media only screen and (min-width: 992px) {
+  .container-switch__home {
+    display: block;
+  }
+}

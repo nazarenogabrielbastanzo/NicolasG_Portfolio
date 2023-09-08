@@ -1,0 +1,152 @@
+.container__about {
+  z-index: 3;
+  position: relative;
+}
+
+.dark__about {
+  background-color: #0062a8;
+}
+
+.light__about {
+  background-color: #4ba4e4;
+}
+
+.dark-text__about {
+  color: #f8f9fa;
+}
+
+.light-text__about {
+  color: #000000;
+}
+
+.profile-container__about {
+  width: 100%;
+}
+
+.profile-container__about img {
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.download__about {
+  color: #f8f9fa;
+  width: 10rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  display: inline-block;
+}
+
+.dark-button__about {
+  background-color: #4ba4e4;
+  color: #000000;
+}
+
+.light-button__about {
+  background-color: #084977;
+  color: #f8f9fa;
+}
+
+.dark-button__about:hover {
+  background-color: #f8f9fa;
+}
+
+.light-button__about:hover {
+  background-color: #000000;
+}
+
+.text-container__about {
+  width: 100%;
+}
+
+.social-media__about a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.social-media__about svg {
+  font-size: 2rem;
+}
+
+.light-social-media__about svg {
+  fill: #000000;
+}
+
+.dark-social-media__about svg {
+  fill: #f8f9fa;
+}
+
+.dark-social-media__about svg:hover {
+  cursor: pointer;
+  fill: #000000;
+}
+
+.light-social-media__about svg:hover {
+  cursor: pointer;
+  fill: #f8f9fa;
+}
+
+@media only screen and (min-width: 425px) {
+  .profile-container__about {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .light-text__about,
+  .dark-text__about {
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container__about {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .p-text__about {
+    font-size: 1.3rem;
+  }
+
+  .profile-container__about {
+    width: 50%;
+  }
+
+  .text-container__about {
+    width: 50%;
+  }
+
+  .profile-container__about {
+    align-items: center;
+  }
+
+  .profile-container__about img {
+    height: 22rem;
+    width: 22rem;
+    border-radius: 20%;
+  }
+
+  .container__about h3 {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container__about {
+    padding-left: 10rem !important;
+    padding-right: 10rem !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container__about {
+    padding-left: 15rem !important;
+    padding-right: 15rem !important;
+  }
+}
