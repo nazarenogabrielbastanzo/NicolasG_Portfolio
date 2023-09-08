@@ -82,6 +82,10 @@
   color: #fff;
 }
 
+.wsp-desktop {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .container__contact {
     padding-left: 5rem !important;
@@ -132,6 +136,14 @@
   .container-forms__contact {
     height: 90%;
     align-items: center;
+  }
+
+  .wsp-desktop {
+    display: block;
+  }
+
+  .wsp-mobile {
+    display: none;
   }
 }
 

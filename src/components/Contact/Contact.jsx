@@ -32,7 +32,21 @@ const Contact = () => {
                 href={`https://web.whatsapp.com/send?phone=573147974978&text=${t(
                   "contact.msj-wsp"
                 )}`}
-                className={`box__contact mt-2 ${theme}-text__contact`}
+                className={`box__contact mt-2 ${theme}-text__contact wsp-desktop`}
+              >
+                {t("contact.whatsapp")}
+                <i
+                  className="fa-brands fa-whatsapp"
+                  style={{ margin: "0.5rem" }}
+                ></i>
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={`https://api.whatsapp.com/send?phone=573147974978&text=${t(
+                  "contact.msj-wsp"
+                )}`}
+                className={`box__contact mt-2 ${theme}-text__contact wsp-mobile`}
               >
                 {t("contact.whatsapp")}
                 <i
