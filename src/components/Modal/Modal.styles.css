@@ -1,0 +1,16 @@
+.project-code {
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-decoration: none;
+  border-radius: 1rem;
+  color: rgb(0, 0, 0);
+  background-color: #3838383b;
+}
+
+.project-code:hover {
+  background-color: #084977;
+  color: #ffffff;
+}

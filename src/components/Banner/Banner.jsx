@@ -1,19 +1,17 @@
-import React from "react";
-import Typed from "react-typed";
-import LogoLight from "../../assets/logo/Logo-ligth.png";
-import LogoDark from "../../assets/logo/Logo-dark.png";
-import { useTranslation } from "react-i18next";
 import "./Banner.styles.css";
+import Typed from "react-typed";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import LogoDark from "../../assets/logo/Logo-dark.png";
+import LogoLight from "../../assets/logo/Logo-ligth.png";
 
 const Banner = () => {
   const [t] = useTranslation("global");
 
   const { theme } = useSelector((state) => state.generalSlice);
 
-  const [themeSelected, setThemeSelected] = useState("light");
+  const [themeSelected, setThemeSelected] = useState("dark");
 
   useEffect(() => {
     if (theme === "light") {
@@ -25,7 +23,7 @@ const Banner = () => {
 
   return (
     <section
-      className={`container__banner d-flex align-items-center p-3 ${theme}__banner`}
+      className={`container__banner d-flex align-items-center p-4 ${theme}__banner`}
       id="Banner"
     >
       <div className="w-100 h-75 d-flex align-items-center ">
@@ -41,11 +39,7 @@ const Banner = () => {
             <b>{t("banner.title")}</b>
           </h1>
           <Typed
-            strings={[
-              t("banner.string1"),
-              t("banner.string2"),
-              t("banner.string3")
-            ]}
+            strings={[t("banner.string1")]}
             typeSpeed={150}
             backSpeed={100}
             loop

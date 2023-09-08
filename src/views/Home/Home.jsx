@@ -1,19 +1,16 @@
-import React from "react";
 import "./Home.styles.css";
-import Banner from "../../components/Banner/Banner";
+import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import useRequest from "../../hooks/useRequest";
 import About from "../../components/About/About";
+import Loader from "../../components/Loader/Loader";
+import Banner from "../../components/Banner/Banner";
 import Skills from "../../components/Skills/Skills";
-import Projects from "../../components/Projects/Projects";
 import Contact from "../../components/Contact/Contact";
+import Switches from "../../components/Switches/Switches";
+import Projects from "../../components/Projects/Projects";
 import StarsToUp from "../../utils/backgrounds/StarsToUp/StarsToUp";
 import StarsToDown from "../../utils/backgrounds/StarsToDown/StarsToDown";
-import useRequest from "../../hooks/useRequest";
-import Loader from "../../components/Loader/Loader";
-import { useSelector } from "react-redux";
-import { useState } from "react";
-import { useEffect } from "react";
-import Switches from "../../components/Switches/Switches";
-import "./Home.styles.css";
 
 const Home = () => {
   useRequest();

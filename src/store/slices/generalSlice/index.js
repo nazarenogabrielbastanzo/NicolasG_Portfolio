@@ -4,7 +4,7 @@ export const generalSlice = createSlice({
   name: "language",
   initialState: {
     language: "en",
-    theme: "light",
+    theme: "dark",
     isLoading: false
   },
   reducers: {

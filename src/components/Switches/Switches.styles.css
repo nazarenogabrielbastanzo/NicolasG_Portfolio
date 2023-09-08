@@ -98,24 +98,24 @@
   right: 10px;
 }
 
-.theme-toggle__switch:checked + .theme-switch-label__switch {
+.theme-toggle__switch:not(:checked) + .theme-switch-label__switch {
   background-color: #ccc;
 }
 
 .theme-toggle__switch + .theme-switch-label__switch .fa-moon {
-  color: #f1c40f;
+  color: #f8f9fa;
 }
 
 .theme-toggle__switch + .theme-switch-label__switch .fa-sun {
-  color: #f39c12;
+  color: #f8f9fa;
 }
 
 .theme-toggle__switch:checked + .theme-switch-label__switch .fa-moon {
-  color: #f8f9fa;
+  color: #f1c40f;
 }
 
 .theme-toggle__switch:checked + .theme-switch-label__switch .fa-sun {
-  color: #f8f9fa;
+  color: #f39c12;
 }
 
 .theme-toggle__switch:checked + .theme-switch-label__switch::before {

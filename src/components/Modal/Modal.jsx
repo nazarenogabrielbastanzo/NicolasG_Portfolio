@@ -1,7 +1,6 @@
-import React from "react";
-import { useSelector } from "react-redux";
-
 import "./Modal.styles.css";
+import Github from "../../assets/icon/Githubv2.png";
+import { useSelector } from "react-redux";
 
 const Modal = () => {
   const { project } = useSelector((state) => state.projectSlice);
@@ -32,20 +31,28 @@ const Modal = () => {
           <div className="modal-body d-flex justify-content-center">
             <div className="card mb-3" style={{ maxWidth: "400px" }}>
               <div className="row g-0">
-                <div className="col-md-4">
+                <div>
                   <img
                     src={project.image}
                     className="img-fluid rounded-start"
                     alt="project-name"
                   />
                 </div>
-                <div className="col-md-8">
+                <div>
                   <div className="card-body">
                     <p className="card-text">
                       {language === "en"
                         ? project.englishDescription
                         : project.spanisDescription}
                     </p>
+                    <a
+                      className="project-code"
+                      href={project.deploy}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      See the code!
+                    </a>
                   </div>
                 </div>
               </div>

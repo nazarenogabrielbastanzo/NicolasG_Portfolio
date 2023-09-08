@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./Loader.styles.css";
 
 const Loader = () => {
@@ -12,7 +10,7 @@ const Loader = () => {
           <div className="spinner-line"></div>
           <div className="spinner-circle">&#9679;</div>
         </div>
-        <span>Cargando</span>
+        <span>Loading</span>
       </div>
     </div>
   );

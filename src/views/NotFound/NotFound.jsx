@@ -1,8 +1,7 @@
-import React from "react";
-import Typed from "react-typed";
-import { useNavigate } from "react-router-dom";
 import "./NotFound.styles.css";
+import Typed from "react-typed";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
   const [t] = useTranslation("global");

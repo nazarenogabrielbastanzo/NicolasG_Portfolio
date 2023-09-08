@@ -21,6 +21,10 @@
   color: #f8f9fa;
 }
 
+.container__navbar-desktop {
+  display: none;
+}
+
 @media only screen and (min-width: 576px) {
   .light-offcanvas-body,
   .light-offcanvas-header {
@@ -40,5 +44,44 @@
 @media only screen and (min-width: 992px) {
   .container__navbar {
     display: none;
+  }
+
+  .container__navbar-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    z-index: 4;
+    margin-left: 1.5rem;
+  }
+
+  .desktop__navbar {
+    border-radius: 2rem;
+    padding: 0.1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .light-desktop__navbar {
+    background-color: #d5d5d5;
+    border: 1px solid grey;
+  }
+
+  .dark-desktop__navbar {
+    background-color: #d5d5d5;
+    border: 1px solid black;
+  }
+
+  .desktop__navbar i {
+    font-size: 1.8rem !important;
+  }
+
+  .desktop__navbar a {
+    border-radius: 0.2rem;
+  }
+
+  .desktop__navbar a:hover {
+    background-color: #000;
   }
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import "./StarsToDown.css";
 
 const Stars = () => {

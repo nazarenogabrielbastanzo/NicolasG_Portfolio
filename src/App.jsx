@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./views/Home/Home";
-import NotFound from "./views/NotFound/NotFound.jsx";
-import Navbar from "./components/Navbar/Navbar";
 import "./reset.styles.css";
+import Home from "./views/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import NotFound from "./views/NotFound/NotFound.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (

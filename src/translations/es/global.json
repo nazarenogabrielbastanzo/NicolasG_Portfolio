@@ -1,9 +1,7 @@
 {
   "banner": {
-    "title": "Hola! Soy Nicolas GG",
-    "string1": "Soy Desarrollador FrontEnd",
-    "string2": "Soy Desarrollador BackEnd",
-    "string3": "Soy Desarrollador FullStack"
+    "title": "Hola! Soy Nicolas G",
+    "string1": "Soy Desarrollador BackEnd"
   },
   "nav": {
     "home": "Inicio",
@@ -15,7 +13,7 @@
   "about": {
     "title": "Acerca de mi",
     "string1": "Soy un desarrollador de Colombia interesado en las tecnologías web, especialmente en el desarrollo backend. Me gradué de Academlo Bootcamp como Desarrollador Full Stack y de la Universidad (UTP) en el programa de gobierno MisionTic 2022.",
-    "string2": "Desarrollo mis habilidades como autodidacta en plataformas online como Udemy, Documentación Oficial y Stack OverFlow (Youtube y ChatGPT también pero ¡Shh! 🤫). Participé en el programa No Country desarrollando el backend de la aplicación Fashion Hunter y trabajé durante ocho meses para la empresa BRM como desarrollador full stack."
+    "string2": "Desarrollo mis habilidades como autodidacta en plataformas online como Udemy, Documentación Oficial, Stack OverFlow y ChatGPT. Participé en el programa No Country desarrollando el backend de la aplicación Fashion Hunter, trabajé durante ocho meses para la empresa BRM como desarrollador full stack y otros cuatro meses para la empresa Inclub Marketing como desarrollador full stack."
   },
   "skills": {
     "title": "Habilidades"
@@ -39,6 +37,7 @@
   "contact": {
     "title": "Contacto",
     "whatsapp": "Enviar Whatsapp",
+    "msj-wsp": "Hola! Quiero trabajar contigo, vi tu portafolio y me gustó.",
     "or": "O",
     "email": "Enviar Correo",
     "form": {

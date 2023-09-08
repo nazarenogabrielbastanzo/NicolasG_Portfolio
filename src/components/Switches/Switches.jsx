@@ -1,13 +1,11 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import "./Switches.styles.css";
 import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   setLanguage as setLanguageAction,
   setTheme
 } from "../../store/slices/generalSlice";
-import { useTranslation } from "react-i18next";
-import "./Switches.styles.css";
 
 const Switches = ({ id }) => {
   // eslint-disable-next-line no-unused-vars
@@ -29,9 +27,9 @@ const Switches = ({ id }) => {
 
   useEffect(() => {
     if (isLigth) {
-      dispatch(setTheme("light"));
-    } else {
       dispatch(setTheme("dark"));
+    } else {
+      dispatch(setTheme("light"));
     }
   }, [isLigth, dispatch]);
 
