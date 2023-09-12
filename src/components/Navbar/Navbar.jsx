@@ -38,6 +38,14 @@ const Navbar = () => {
 
   const id = "navbar";
 
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+
   return (
     <section>
       <nav className="navbar fixed-top p-3 container__navbar">
@@ -117,6 +125,9 @@ const Navbar = () => {
                     className="nav-link text-end d-flex justify-content-center align-items-center"
                     aria-current="page"
                     href={element.to}
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="right"
+                    data-bs-title={element.name}
                   >
                     <i
                       className={element.icon}
