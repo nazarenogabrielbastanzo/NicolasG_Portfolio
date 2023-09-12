@@ -1,10 +1,12 @@
 .container__projects {
   z-index: 3;
   position: relative;
+  height: 42rem;
 }
 
 .project-container__projects {
   width: 100%;
+  height: 75%;
 }
 
 .project-image__projects {
@@ -23,7 +25,7 @@
 
 .item__projects {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -64,6 +66,8 @@
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 80%;
+  margin: auto;
 }
 
 .pagination ul {
@@ -145,6 +149,10 @@
     padding-left: 7rem !important;
     padding-right: 7rem !important;
   }
+
+  .pagination {
+    width: 30%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -154,6 +162,10 @@
 
   .project-image__projects {
     width: 20rem;
+  }
+
+  .container__projects {
+    height: 46rem;
   }
 }
 
@@ -168,6 +180,7 @@
   .container__projects {
     padding-left: 15rem !important;
     padding-right: 15rem !important;
+    height: auto;
   }
 
   .item__projects {
