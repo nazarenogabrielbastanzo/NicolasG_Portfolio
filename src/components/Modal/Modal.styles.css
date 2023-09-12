@@ -14,3 +14,7 @@
   background-color: #084977;
   color: #ffffff;
 }
+
+.modal-footer img {
+  cursor: pointer;
+}

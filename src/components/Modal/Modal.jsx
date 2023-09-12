@@ -1,11 +1,21 @@
 import "./Modal.styles.css";
-import Github from "../../assets/icon/Githubv2.png";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Modal = () => {
   const { project } = useSelector((state) => state.projectSlice);
 
   const { language } = useSelector((state) => state.generalSlice);
+
+  useEffect(() => {
+    const tooltipTriggerList = document.querySelectorAll(
+      '[data-bs-toggle="tooltip"]'
+    );
+
+    const tooltipList = [...tooltipTriggerList].map(
+      (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+    );
+  }, [project]);
 
   return (
     <div
@@ -34,7 +44,7 @@ const Modal = () => {
                 <div>
                   <img
                     src={project.image}
-                    className="img-fluid rounded-start"
+                    className="img-fluid rounded-top"
                     alt="project-name"
                   />
                 </div>
@@ -67,6 +77,9 @@ const Modal = () => {
                       src={tecnology.image}
                       alt="tecnology"
                       style={{ width: "2rem" }}
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title={tecnology.name}
                     />
                   </li>
                 );
